@@ -1,10 +1,16 @@
-import './App.css'
-import Button from './components/Button'
+// Components
+import Banner from './components/Banner'
+// Variables
+import * as banner from './variables/banner'
 
 const App = props => {
   return (
     <>
-      <Button content='Bouton test' onClick={() => console.log("Bouton test")}/>
+      <Banner
+        cta={banner.cta}
+        title={banner.title.text}
+        subTitle={banner.subTitle.text}
+      />
     </>
   )
 }
