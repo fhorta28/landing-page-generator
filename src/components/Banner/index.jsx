@@ -3,8 +3,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // Intern
 import Button from '../Button'
-import { Container, Image, LeftContainer, RightContainer, SubTitle, Title } from './style' 
+import { Container, Image, LeftContainer, RightContainer, SubTitle, Title } from './style'
+import Navbar from '../Navbar/index' 
 // Variables
+import * as navbar from '../../variables/navbar'
 import * as banner from '../../variables/banner'
 import BannerImg from '../../variables/assets/banner_img.svg'
 

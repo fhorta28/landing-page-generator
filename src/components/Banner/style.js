@@ -3,7 +3,7 @@ import * as banner from '../../variables/banner'
 import * as navbar from '../../variables/navbar'
 
 export const Container = styled.div`
-  height: calc(100vh - ${navbar['navbarHeight']});
+  height: calc(100vh - ${navbar.navStyle.navbarHeight});
   background: ${banner.background};
   display: flex;
   padding: 0 50px;
