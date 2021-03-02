@@ -21,13 +21,18 @@ export const containerLogoSlogan = {
 
 export const logo = {
   height: '50px',
-  width: '50px', 
+  width: '50px',
+ 
 }
 
 export const slogan = {
   width :'60%',
   text: 'un slogan',
   textColor: 'rgb(255, 255, 255)',
+}
+
+export const burgerIcon = {
+  text :'faBars',
 }
 
   

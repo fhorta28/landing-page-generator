@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 
+//Intern
 import { StyleBurger, ContainerBtn, NavBtn } from './style';
 
-
+//Variables
+import * as FontAwesomeIcon from '../../services/FontAwesomeIco';
+import * as navbar from '../../variables/navbar';
 
 const Menu = () => {
 
@@ -15,10 +16,11 @@ const Menu = () => {
             <NavBtn >Demander une démo</NavBtn> 
          </ContainerBtn>
          <StyleBurger open= {open} onClick={()=> setOpen(!open)}>
-             <FontAwesomeIcon icon={faBars} size="2x"/>
+           <FontAwesomeIcon icon={navbar.burgerIcon.text} size="2x"/>
          </StyleBurger>
          </> 
     )
 }
+
 
 export default Menu

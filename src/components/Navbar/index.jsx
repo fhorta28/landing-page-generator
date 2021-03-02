@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 //Intern
 import Menu from './menu'
@@ -10,15 +9,15 @@ import * as navbar from '../../variables/navbar'
 import LogoImg from '../../variables/assets/logo_img.svg'
 
 
- const Navbar = props => {
+ const Navbar = () => {
     
-    const { slogan } = props
+    
     return (
         
         <Nav>
         <ContainerBrand >
             <Logo src={LogoImg} alt="logo"/>
-            { slogan && <Slogan>{slogan}</Slogan>}
+           <Slogan>{navbar.slogan.text}</Slogan>
         </ContainerBrand> 
         <Menu/>
         </Nav> 
@@ -26,8 +25,6 @@ import LogoImg from '../../variables/assets/logo_img.svg'
 }
 
 
-Navbar.propTypes = {
-    slogan: PropTypes.string,
-}
+
 export default Navbar
 
