@@ -8,7 +8,9 @@ import * as navbar from './variables/navbar'
 const App = props => {
   return (
     <>
-      <Navbar/>
+      <Navbar
+        slogan={navbar.slogan.text}
+      />
       <Banner
         cta={banner.cta}
         title={banner.title.text}

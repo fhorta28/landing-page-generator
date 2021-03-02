@@ -1,27 +1,33 @@
 import React from 'react'
-import styled from 'styled-components'
-import { logo } from '../../variables/navbar'
+import PropTypes from 'prop-types'
 
-import { Nav, NavBtn, ContainerLogo, ContainerBtn, Logo } from './style'
+//Intern
+import Menu from './menu'
+import { Nav,  ContainerBrand, Logo, Slogan } from './style'
+
+// Variables
+import * as navbar from '../../variables/navbar'
 import LogoImg from '../../variables/assets/logo_img.svg'
 
 
- const Navbar = () => {
-
-   
+ const Navbar = props => {
+    
+    const { slogan } = props
     return (
         
-        <Nav >
-        <ContainerLogo >
-        <Logo src={LogoImg} alt="logo"/> 
-        </ContainerLogo> 
-        <ContainerBtn>
-        <NavBtn>Demander une démo</NavBtn> 
-        </ContainerBtn>
-        
+        <Nav>
+        <ContainerBrand >
+            <Logo src={LogoImg} alt="logo"/>
+            { slogan && <Slogan>{slogan}</Slogan>}
+        </ContainerBrand> 
+        <Menu/>
         </Nav> 
     )
 }
 
+
+Navbar.propTypes = {
+    slogan: PropTypes.string,
+}
 export default Navbar
 
