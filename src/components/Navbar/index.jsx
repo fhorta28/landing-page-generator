@@ -1,7 +1,7 @@
 import React from 'react'
 
 //Intern
-import Menu from './menu'
+import Menu from './Menu'
 import { Nav,  ContainerBrand, Logo, Slogan } from './style'
 
 // Variables
