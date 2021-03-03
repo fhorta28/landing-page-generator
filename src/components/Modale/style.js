@@ -22,7 +22,7 @@ export const StyleModale = styled.div`
 
 `
 
-export const BtnClose = styled.button`
+export const BtnClose = styled.div`
 
 
 
