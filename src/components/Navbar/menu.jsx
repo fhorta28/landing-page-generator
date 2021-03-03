@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { StyleBurger, ContainerBtn, NavBtn } from './style';
 
 //Variables
-import * as FontAwesomeIcon from '../../services/FontAwesomeIco';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as navbar from '../../variables/navbar';
 
 const Menu = () => {

@@ -32,7 +32,7 @@ export const slogan = {
 }
 
 export const burgerIcon = {
-  text :'faBars',
+  text :'bars',
 }
 
   
