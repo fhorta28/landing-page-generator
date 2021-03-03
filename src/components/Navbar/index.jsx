@@ -1,7 +1,7 @@
 import React from 'react'
 
 //Intern
-import Menu from './menu'
+import Menu from './Menu'
 import { Nav,  ContainerBrand, Logo, Slogan } from './style'
 
 // Variables
@@ -15,13 +15,13 @@ import LogoImg from '../../variables/assets/logo_img.svg'
     return (
         
         <Nav>
-        <ContainerBrand >
+          <ContainerBrand >
             <Logo src={LogoImg} alt="logo"/>
-           <Slogan>{navbar.slogan.text}</Slogan>
-        </ContainerBrand> 
-        <Menu/>
+            <Slogan>{navbar.slogan.text}</Slogan>
+          </ContainerBrand> 
+          <Menu/>
         </Nav> 
-    )
+     )
 }
 
 

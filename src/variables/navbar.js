@@ -11,8 +11,7 @@ export const btn = {
   backgroundColor: 'rgb(70, 165, 159)',
   backgroundColorOnclick :'rgb(70, 165, 159, 0.4)',
   textColor: 'rgb(255, 255, 255)',
-  content: 'Demander une démo',
-   
+  content: 'Demander une démo', 
 }
 
 export const containerLogoSlogan = {
@@ -22,7 +21,6 @@ export const containerLogoSlogan = {
 export const logo = {
   height: '50px',
   width: '50px',
- 
 }
 
 export const slogan = {
