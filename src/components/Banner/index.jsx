@@ -11,7 +11,7 @@ import * as banner from '../../variables/banner'
 import BannerImg from '../../variables/assets/banner_img.svg'
 
 
-const Banner = ()=> {
+const Banner = () => {
   
   return (
     <Container>
