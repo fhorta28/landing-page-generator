@@ -16,20 +16,20 @@ const Banner = () => {
   return (
     <Container>
       <LeftContainer>
-       <Title>{banner.title.text}</Title> 
-       <SubTitle>{banner.subTitle.text}</SubTitle> 
+        <Title>{banner.title.text}</Title> 
+        <SubTitle>{banner.subTitle.text}</SubTitle> 
         <Button
-          backgroundColor={banner.cta.backgroundColor}
-          textColor={banner.cta.textColor}
-          content={banner.cta.content}
-          onClick={banner.cta.action}
+            backgroundColor={banner.cta.backgroundColor}
+            textColor={banner.cta.textColor}
+            content={banner.cta.content}
+            onClick={banner.cta.action}
         /> 
       </LeftContainer>
       <RightContainer>
-          <Image src={BannerImg} alt='Banner Image' />
+        <Image src={BannerImg} alt='Banner Image' />
       </RightContainer>
     </Container>
-  )
+   )
 }
 
 
