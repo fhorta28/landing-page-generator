@@ -1,4 +1,4 @@
 
-export const modaleCloseIcon = {
-    text :'times-circle',
+export const modalCloseIcon = {
+    text :'timescircle',
   }
