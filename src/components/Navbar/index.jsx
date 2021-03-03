@@ -1,27 +1,30 @@
 import React from 'react'
-import styled from 'styled-components'
-import { logo } from '../../variables/navbar'
 
-import { Nav, NavBtn, ContainerLogo, ContainerBtn, Logo } from './style'
+//Intern
+import Menu from './Menu'
+import { Nav,  ContainerBrand, Logo, Slogan } from './style'
+
+// Variables
+import * as navbar from '../../variables/navbar'
 import LogoImg from '../../variables/assets/logo_img.svg'
 
 
  const Navbar = () => {
-
-   
+    
+    
     return (
         
-        <Nav >
-        <ContainerLogo >
-        <Logo src={LogoImg} alt="logo"/> 
-        </ContainerLogo> 
-        <ContainerBtn>
-        <NavBtn>Demander une démo</NavBtn> 
-        </ContainerBtn>
-        
+        <Nav>
+          <ContainerBrand >
+            <Logo src={LogoImg} alt="logo"/>
+            <Slogan>{navbar.slogan.text}</Slogan>
+          </ContainerBrand> 
+          <Menu/>
         </Nav> 
-    )
+     )
 }
+
+
 
 export default Navbar
 

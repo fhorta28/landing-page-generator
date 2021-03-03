@@ -1,19 +1,14 @@
 // Components
 import Banner from './components/Banner'
 import Navbar from './components/Navbar'
-// Variables
-import * as banner from './variables/banner'
-import * as navbar from './variables/navbar'
 
-const App = props => {
+
+
+const App = () => {
   return (
     <>
       <Navbar/>
-      <Banner
-        cta={banner.cta}
-        title={banner.title.text}
-        subTitle={banner.subTitle.text}
-      />
+      <Banner/>
     </>
   )
 }
