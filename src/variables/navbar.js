@@ -32,3 +32,4 @@ export const slogan = {
 export const burgerIcon = {
   text :'bars',
 }
+
