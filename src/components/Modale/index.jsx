@@ -6,9 +6,16 @@ import { StyleModale } from './style';
 
 const Modale = ({openModale, close}) => openModale ?(
 
-    <StyleModale>
+    <>
+        <ContainerModale className='overlay'>
+            <WrapperModale>
+                <StyleModale>
+                    <BtnClose onclick={close}></BtnClose>
+                </StyleModale>
+            </WrapperModale>
+        </ContainerModale>
+    </>
 
-    </StyleModale>
 ) : null;
 
 export default Modale
