@@ -1,24 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //Intern
-import { StyleModale } from './style';
+import { ContainerModale, WrapperModale, StyleModale, BtnClose } from './style';
 
+//Variables
+import * as modalForm from '../../variables/modalForm'
 
-const Modale = ({openModale, close}) => openModale ?(
+const Modale = () => {
 
-    <>
-        <ContainerModale className='overlay'>
+    const [openModale, setOpenModale] = useState(false)
+    return (
+        <>
+            <ContainerModale className='overlay'></ContainerModale>
             <WrapperModale>
                 <StyleModale>
-                    <BtnClose onclick={close}></BtnClose>
+                    <BtnClose openModale = {openModale} onClick={()=> setOpenModale(!openModale)}>
+                        <FontAwesomeIcon icon={modalForm.modaleCloseIcon.text} size="2x"></FontAwesomeIcon>
+                    </BtnClose>
                 </StyleModale>
             </WrapperModale>
-        </ContainerModale>
-    </>
+        </>
+    )   
+}
 
-) : null;
 
 export default Modale
-   
-
-
