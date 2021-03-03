@@ -15,13 +15,13 @@ import LogoImg from '../../variables/assets/logo_img.svg'
     return (
         
         <Nav>
-        <ContainerBrand >
+          <ContainerBrand >
             <Logo src={LogoImg} alt="logo"/>
-           <Slogan>{navbar.slogan.text}</Slogan>
-        </ContainerBrand> 
-        <Menu/>
+            <Slogan>{navbar.slogan.text}</Slogan>
+          </ContainerBrand> 
+          <Menu/>
         </Nav> 
-    )
+     )
 }
 
 
