@@ -1,5 +1,5 @@
 // Base
-import React, { useState } from 'react'
+import React from 'react'
 
 // Intern
 import Button from '../Button'
@@ -14,7 +14,6 @@ import BannerImg from '../../variables/assets/banner_img.svg'
 
 const Banner = () => {
   
-  const [openModale, setOpenModale] = useState(false);
 
   return (
     <Container>
