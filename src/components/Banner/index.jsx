@@ -19,10 +19,10 @@ const Banner = ({openModal}) => {
         <Title>{banner.title.text}</Title> 
         <SubTitle>{banner.subTitle.text}</SubTitle> 
         <Button
-            backgroundColor={banner.cta.backgroundColor}
-            textColor={banner.cta.textColor}
-            content={banner.cta.content}
-            onClick={openModal}
+          backgroundColor={banner.cta.backgroundColor}
+          textColor={banner.cta.textColor}
+          content={banner.cta.content}
+          onClick={openModal}
         />
       </LeftContainer>
       <RightContainer>
