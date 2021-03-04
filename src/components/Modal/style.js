@@ -14,7 +14,6 @@ export const ModalWrapper = styled.div`
     height: 100vh;
     width: 100vw;
     background-color: rgba(0,0,0, 0.3);
-
 `
 
 export const StyleModal = styled.div`
@@ -26,24 +25,14 @@ export const StyleModal = styled.div`
     box-shadow: 0 0 5px rgb(0 0 0 / 50%);
     padding : 15px;
     animation: appear 0.3s linear;
-
 `
 export const BannerModal = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid;
-
 `
 
 export const BtnClose = styled.div`
     cursor: pointer;
-
 `
-
-
-
-
-
-
-
