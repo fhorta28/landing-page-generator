@@ -33,7 +33,7 @@ const Modal = ({closeModal}) => {
                 <BannerModal>
                     <h2>{modalForm.bannerModal.text}</h2>
                     <BtnClose onClick={closeModal}>
-                        <FontAwesomeIcon icon={modalForm.modalCloseIcon.text}></FontAwesomeIcon>
+                        <FontAwesomeIcon icon={modalForm.modalCloseIcon.text}/>
                     </BtnClose>
                 </BannerModal>
             </StyleModal>
@@ -42,9 +42,3 @@ const Modal = ({closeModal}) => {
 }
 
 export default Modal
-
-
-    
-    
-        
- 
