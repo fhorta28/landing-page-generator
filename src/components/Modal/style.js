@@ -14,6 +14,17 @@ export const ModalWrapper = styled.div`
     height: 100vh;
     width: 100vw;
     background-color: rgba(0,0,0, 0.3);
+    
+    ${'' /* animation-name: grow-modal;
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    @keyframes grow-modal {
+      0% { opacity: .2; }
+      25% { opacity: .4; }
+      50% { opacity: .6; }
+      75% { opacity: .8; }
+      100% { width: 410px; height: 190px; opacity: .9; }
+    } */}
 
 `
 
