@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
+//Variables
 import * as navbar from '../../variables/navbar'
-import * as styles from '../../variables/style'
+
 
 
 export const Nav = styled.nav`
@@ -45,25 +46,23 @@ export const ContainerBtn = styled.div`
   align-items: center;
   margin : 0 15px;
   
+  @media (max-width: 768px){
+  margin: 0 auto;
+  flex-flow: column nowrap;
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'}; 
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  height : 100vh;
+  width : 100vw;
+  background-color:${navbar.navStyle.backgroundColor}; 
+  }
 
-
-   @media (max-width: 768px){
-    margin: 0 auto;
-    flex-flow: column nowrap;
-    transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'}; 
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    position: fixed;
-    height : 100vh;
-    width : 100vw;
-    background-color:${navbar.navStyle.backgroundColor}; 
-  } 
 ` 
 
 
 export const NavBtn = styled.button`
-  
   background-color: ${navbar.btn.backgroundColor};
   border: none;
   border-radius: 30px;
@@ -85,6 +84,7 @@ export const StyleBurger = styled.div`
   justify-content: center;
   background-color: ${({ open }) => open ? navbar.btn.backgroundColorOnclick : navbar.btn.backgroundColor}; 
   border-radius: 3px;
+
   @media (max-width: 768px){
     display: flex;
     z-index: 2;

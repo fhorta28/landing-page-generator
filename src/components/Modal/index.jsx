@@ -1,29 +1,47 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
+//Library
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 //Intern
-import { ModalWrapper, StyleModal, BtnClose } from './style';
+import { ModalWrapper, StyleModal, BannerModal, BtnClose } from './style';
 
 //Variables
 import * as modalForm from '../../variables/modalForm'
 
 
-const index = () => {
-    return (
-        
+const Modal = ({closeModal}) => {
+    
+    let modalRef;
+
+    const hideModal = (e) => {
+      if (modalRef && !modalRef.contains(e.target)) {
+         closeModal();
+      }
+    }
+  
+    useEffect(() => {
+      document.addEventListener('click', hideModal)
+      return () => {
+        document.removeEventListener('click', hideModal);
+      }
+    },[]);
+    
+    return (  
         <ModalWrapper>
-            <StyleModal>
-                <p>modal react</p>
-                <BtnClose >
-                    <FontAwesomeIcon icon={modalForm.modalCloseIcon.text} size="2x"></FontAwesomeIcon>
-                </BtnClose>
+            <StyleModal ref={(node) => modalRef = node}>
+                <BannerModal>
+                    <h2>{modalForm.bannerModal.text}</h2>
+                    <BtnClose onClick={closeModal}>
+                        <FontAwesomeIcon icon={modalForm.modalCloseIcon.text}></FontAwesomeIcon>
+                    </BtnClose>
+                </BannerModal>
             </StyleModal>
-        </ModalWrapper>
-        
+        </ModalWrapper>  
     )
 }
 
-export default index 
+export default Modal
 
 
     
