@@ -11,19 +11,19 @@ import * as banner from '../../variables/banner'
 import BannerImg from '../../variables/assets/banner_img.svg'
 
 
-const Banner = () => {
-  
+const Banner = ({openModal}) => {
+
   return (
     <Container>
       <LeftContainer>
         <Title>{banner.title.text}</Title> 
         <SubTitle>{banner.subTitle.text}</SubTitle> 
         <Button
-            backgroundColor={banner.cta.backgroundColor}
-            textColor={banner.cta.textColor}
-            content={banner.cta.content}
-            onClick={banner.cta.action}
-        /> 
+          backgroundColor={banner.cta.backgroundColor}
+          textColor={banner.cta.textColor}
+          content={banner.cta.content}
+          onClick={openModal}
+        />
       </LeftContainer>
       <RightContainer>
         <Image src={BannerImg} alt='Banner Image' />
@@ -31,7 +31,5 @@ const Banner = () => {
     </Container>
    )
 }
-
-
 
 export default Banner

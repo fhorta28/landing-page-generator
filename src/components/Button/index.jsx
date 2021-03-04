@@ -8,11 +8,11 @@ import { Container } from './style'
 const Button = props => {
   // Props & States
   const { backgroundColor, textColor, content, onClick } = props
-
+  
   return (
-    <Container backgroundColor={backgroundColor} textColor={textColor} onClick={onClick}>
-      {content}
-    </Container>
+      <Container backgroundColor={backgroundColor} textColor={textColor} onClick= {onClick}>
+        {content}
+      </Container>   
   )
 }
 
