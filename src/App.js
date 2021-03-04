@@ -17,7 +17,7 @@ const App = () => {
   return (
     <>
       <Navbar openModal={toogleModal} />
-      { showModal && <Modal closeModal={toogleModal} /> }
+        { showModal && <Modal closeModal={toogleModal} /> }
       <Banner openModal={toogleModal} />
     </>
   )
