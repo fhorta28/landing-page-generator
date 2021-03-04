@@ -13,7 +13,7 @@ const Button = props => {
   
   return (
     
-      <Container backgroundColor={backgroundColor} textColor={textColor} onClick={onClick}>
+      <Container backgroundColor={backgroundColor} textColor={textColor} onClick= {onClick}>
         {content}
       </Container>
       
@@ -28,3 +28,4 @@ Button.propTypes = {
 }
 
 export default Button
+
