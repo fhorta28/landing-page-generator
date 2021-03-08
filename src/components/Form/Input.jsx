@@ -1,7 +1,7 @@
 import React, { useState }from 'react'
 
 //Intern
-import { InputContainer, InputText } from './style'
+import { InputContainer, InputText, InputSelect } from './style'
 
 const Input = ({
     value,
@@ -54,28 +54,40 @@ const Input = ({
         return <label>{ label }</label>      
       }
       return null
-    }
-
-    const typeOfInput = () => {
-      if (type ==="select") {
-        return <InputText/>
-      }
-    }
+    } 
   
     const isFocused = focused || String(value).length || type === "select"
   
+    const inputType = () => {
+      if(type === "select"){
+        return  <InputSelect
+                  type={type}
+                  preference={['call', 'video']}
+                  onChange={e => handleOnChange(e.target.value)}
+                  onFocus={handleOnFocus}
+                  onBlur={handleOnBlur}
+                  ref={ref => setRef(ref)}
+                  {...props}       
+                > 
+                  <option value={preference}>Être rappelé.e</option>
+                  <option value={preference}>Recevoir une vidéo de présentation</option>
+                </InputSelect>  
+      } else if(type != "select"){
+        return  <InputText 
+                  value={value}
+                  type={type}
+                  onChange={e => handleOnChange(e.target.value)}
+                  onFocus={handleOnFocus}
+                  onBlur={handleOnBlur}
+                  ref={ref => setRef(ref)}
+                  {...props} 
+                />      
+              }
+    }
     return (
       <InputContainer focused={isFocused} error={error}>
-        { renderLabel() }
-        <input 
-          value={value}
-          type={type}
-          onChange={e => handleOnChange(e.target.value)}
-          onFocus={handleOnFocus}
-          onBlur={handleOnBlur}
-          ref={ref => setRef(ref)}
-          {...props}
-        />
+        { renderLabel() }       
+        { inputType() }
       </InputContainer>
     )
   }

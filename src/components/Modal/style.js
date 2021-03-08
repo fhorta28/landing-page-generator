@@ -17,14 +17,19 @@ export const ModalWrapper = styled.div`
 `
 
 export const StyleModal = styled.div`
-    width: 50vw;
-    height: 50vh;
+    width: 55vw;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
     background-color: ${modaleForm.modal.backgroundColor};
     color: ${modaleForm.modal.textColor};
     border-radius: 12px;
     box-shadow: 0 0 5px rgb(0 0 0 / 50%);
     padding : 15px;
     animation: appear 0.3s linear;
+    @media (max-width: 768px) {
+    height: 80vh;
+  }
 `
 export const BannerModal = styled.div`
     display: flex;

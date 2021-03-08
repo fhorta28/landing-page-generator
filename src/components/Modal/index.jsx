@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 //Intern
+import Form from '../Form'
 import { ModalWrapper, StyleModal, BannerModal, BtnClose } from './style';
 
 //Variables
@@ -36,6 +37,7 @@ const Modal = ({closeModal}) => {
                         <FontAwesomeIcon icon={modalForm.modalCloseIcon.text}/>
                     </BtnClose>
                 </BannerModal>
+                <Form/>
             </StyleModal>
         </ModalWrapper>  
     )

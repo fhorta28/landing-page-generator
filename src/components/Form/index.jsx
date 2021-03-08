@@ -2,7 +2,10 @@ import React, { useState }from 'react'
 
 //Intern
 import Input from './Input'
-import { FormContainer, InputText, InputSelect } from './style'
+
+import { FormContainer, FormBtn, ContainerBtn } from './style'
+
+//Variables
 
 
 const Form =  ()  => {
@@ -13,11 +16,12 @@ const Form =  ()  => {
         email: '',
         phoneNumber: '',
         companyName: '',
-        contactPreference: '',
+        contactPreference: 'call',
       })
 
 
     return (
+      <>
         <FormContainer>
           <Input
             label="Prénom"
@@ -44,17 +48,20 @@ const Form =  ()  => {
             onChange={val => setValues({ ...values, email: val })}
           />
           <Input
-            label="Entreprise"
+            label="Nom entreprise"
             type="text"
             value={values.companyName}
             onChange={val => setValues({ ...values, companyName: val })}
           />
-          <Input
-            label="Je préfère"
+           <Input
+            label="Contact"
             type="select"
-            onChange={val => setValues({ ...values, contactPreference: val })}         
-          />
+            value={values.contactPreference}
+            onChange={val => setValues({ ...values, contactPreference: val })}
+           />
         </FormContainer>
+        <ContainerBtn><FormBtn>Envoyé</FormBtn></ContainerBtn>
+      </>
     )
 }
 
