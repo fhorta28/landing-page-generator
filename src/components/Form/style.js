@@ -34,7 +34,7 @@ export const InputContainer = styled.div`
     font-size: 18px;
     color: ${modalForm.form.textColor};
     position: absolute;
-    top: 10px;
+    top: 12px;
     left: 15px;
     transition: all 0.2s ease;
     z-index: 500;
@@ -42,15 +42,14 @@ export const InputContainer = styled.div`
       font-size: 13px;
     }
 
-    ${props => props.focused && `
-      color:${modalForm.form.textLabel}; 
+    ${ props => props.focused && `
+      color: ${ modalForm.form.textLabel }; 
       border-radius: 3px;
       font-size: 12px;
-      transform: translateY(-16px) translateX(-5px);
+      transform: translateY(-17px) translateX(-5px);
       z-index: 999;
-      background: ${modalForm.modal.backgroundColor};
-      padding: 3px 8px;
-      
+      background: ${ modalForm.modal.backgroundColor };
+      padding: 2px 5px;      
       @media (max-width: 768px) {
       font-size: 11px;
       }
@@ -60,24 +59,28 @@ export const InputContainer = styled.div`
 
 export const InputText = styled.input`
   width:90%;
-  border: 1px solid ${props => props.error ? '#e77674' : '#eee'};
+  border: ${props => props.error ? '1px solid #e77674 !important': '1px solid #eee'};
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   outline: none;
-  padding: 10px 5px;
+  padding: 15px 5px;
   box-sizing: border-box;
   font-size: 16px;
   transition: all 0.2s ease;
   z-index: 500;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    padding: 10px 2px;;
+    }
 `
 export const InputSelect = styled.select`
   width:90%;
-  border: 1px solid ${props => props.error ? '#e77674' : '#eee'};
+  border: 1px solid #eee ;
   border-radius: 10px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.2);
   outline: none;
-  padding: 12px 3px 10px 3px;
+  padding: 15px 3px 15px 3px;
   box-sizing: border-box;
   font-size: 16px;
   transition: all 0.2s ease;
@@ -87,7 +90,7 @@ export const InputSelect = styled.select`
 
 export const ContainerBtn = styled.div`
   width : 90%;
-  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   justify-content : flex-end;
   align-items: center;

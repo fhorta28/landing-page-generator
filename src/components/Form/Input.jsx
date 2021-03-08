@@ -10,12 +10,15 @@ const Input = ({
     onChange,
     onFocus,
     onBlur,
+    onValidate,
     setRef,
     preference,
     ...props
   }) => {
+
     const [focused, setFocused] = useState(false)
-    const [error, setError] = useState(null)
+    const [error, setError] = useState(false)
+    
   
     const handleOnFocus = () => {
       setFocused(true)
@@ -28,22 +31,28 @@ const Input = ({
     }
   
     const validateValue = (val) => {
+      if ( value === ''){
+        setError("Champs Obligatoire")
+      }
+      else {
+        setError(null)
+      }
       if (type === "email") {
-        // email validation
+        // VERY simple email validation
         if (val.indexOf("@") === -1) {
-          setError("email invalide")
+          setError("email is invalid")
         } else {
           setError(null)
         }
       }
-      // add validation conditions for phoneNumber & for submit form after
+      onValid(val)
     }
   
     const handleOnChange = (val) => {
       validateValue(val)
       onChange(val)
     }
-  
+
     const renderLabel = () => {
       if (label) {
         // if we have an error
@@ -73,12 +82,14 @@ const Input = ({
                   <option value={preference}>Recevoir une vidéo de présentation</option>
                 </InputSelect>  
       } else if(type != "select"){
-        return  <InputText 
+        return  <InputText
+                  error={error}
                   value={value}
                   type={type}
                   onChange={e => handleOnChange(e.target.value)}
                   onFocus={handleOnFocus}
                   onBlur={handleOnBlur}
+                  onValid={e => validateValue(e.target.value)}
                   ref={ref => setRef(ref)}
                   {...props} 
                 />      
@@ -98,6 +109,7 @@ const Input = ({
     onChange: () => {},
     onFocus: () => {},
     onBlur: () => {},
+    onValid: () => {},
     setRef: () => {},
   }
   

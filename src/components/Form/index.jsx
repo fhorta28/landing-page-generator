@@ -1,4 +1,5 @@
 import React, { useState }from 'react'
+import PropTypes from 'prop-types'
 
 //Intern
 import Input from './Input'
@@ -8,7 +9,7 @@ import { FormContainer, FormBtn, ContainerBtn } from './style'
 //Variables
 
 
-const Form =  ()  => {
+const Form =  (onValid)  => {
 
     const [values, setValues] = useState({
         firstName: '',
@@ -18,12 +19,21 @@ const Form =  ()  => {
         companyName: '',
         contactPreference: 'call',
       })
+    const [isSubmitted, setIsSubmitted] = useState(false)
 
+    const handleSubmit = () => {
+      onValid((values))
+      setIsSubmitted(true)
+      
+      return console.log('envoyé')
+      }
+    
 
     return (
       <>
         <FormContainer>
           <Input
+            onValide={onValid}
             label="Prénom"
             type="text"
             value={values.firstName}
@@ -60,7 +70,7 @@ const Form =  ()  => {
             onChange={val => setValues({ ...values, contactPreference: val })}
            />
         </FormContainer>
-        <ContainerBtn><FormBtn>Envoyé</FormBtn></ContainerBtn>
+        <ContainerBtn><FormBtn type="submit" onClick={handleSubmit} >Envoyé</FormBtn></ContainerBtn>
       </>
     )
 }
