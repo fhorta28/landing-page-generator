@@ -1,68 +1,63 @@
-import React, { useState }from 'react'
+import React from 'react'
 
 //Intern
 import Input from './Input'
+import UseForm from "./UseForm";
+import validate from "./validateForm";
 import { FormContainer, FormBtn, ContainerBtn } from './style'
-
-//Variables
-
 
 const Form = () => {
 
-  const [values, setValues] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    phoneNumber: '',
-    companyName: '',
-    contactPreference: 'call',
-  })
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const { handleChange, handleSubmit, values, errors } = UseForm(
+    submit,
+    validate
+  )
 
-  const handleSubmit = () => {
-    setIsSubmitted(true)
-    return console.log(values)
+  function submit() {
+    console.log(values);
   }
-
 
   return (
     <>
       <FormContainer>
+      <>
         <Input
           label="Prénom"
           type="text"
           value={values.firstName}
-          onChange={val => setValues({ ...values, firstName: val })}
+          onChange={handleChange}
         />
+        { errors.firstname && <p> {errors.email} </p> }
+      </>
         <Input
           label="Nom"
           type="text"
           value={values.lastName}
-          onChange={val => setValues({ ...values, lastName: val })}
+          onChange={handleChange}
         />
         <Input
           label="Téléphone"
           type="text"
           value={values.phoneNumber}
-          onChange={val => setValues({ ...values, phoneNumber: val })}
+          onChange={handleChange}
         />
         <Input
           label="Email"
           type="email"
           value={values.email}
-          onChange={val => setValues({ ...values, email: val })}
+          onChange={handleChange}
         />
         <Input
           label="Nom entreprise"
           type="text"
           value={values.companyName}
-          onChange={val => setValues({ ...values, companyName: val })}
+          onChange={handleChange}
         />
         <Input
           label="Contact"
           type="select"
           value={values.contactPreference}
-          onChange={val => setValues({ ...values, contactPreference: val })}
+          onChange={handleChange}
         />
       </FormContainer>
       <ContainerBtn><FormBtn type="submit" onClick={handleSubmit} >Envoyé</FormBtn></ContainerBtn>

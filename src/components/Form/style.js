@@ -42,13 +42,13 @@ export const InputContainer = styled.div`
       font-size: 13px;
     }
 
-    ${ props => props.focused && `
-      color: ${ modalForm.form.textLabel }; 
+    ${props => props.focused && `
+      color: ${modalForm.form.textLabel}; 
       border-radius: 3px;
       font-size: 12px;
       transform: translateY(-17px) translateX(-5px);
       z-index: 999;
-      background: ${ modalForm.modal.backgroundColor };
+      background: ${modalForm.modal.backgroundColor};
       padding: 2px 5px;      
       @media (max-width: 768px) {
       font-size: 11px;
@@ -59,7 +59,7 @@ export const InputContainer = styled.div`
 
 export const InputText = styled.input`
   width:90%;
-  border: ${props => props.error ? '1px solid #e77674 !important': '1px solid #eee'};
+  border: ${props => props.errors ? '1px solid #e77674 !important': '1px solid #eee'};
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   outline: none;
@@ -95,7 +95,7 @@ export const ContainerBtn = styled.div`
   justify-content : flex-end;
   align-items: center;
   margin : 10px 15px;
- `
+`
 
 export const FormBtn = styled.button`
   background-color: ${navbar.btn.backgroundColor};

@@ -16,7 +16,7 @@ const Input = ({
   }) => {
 
   const [focused, setFocused] = useState(false)
-  const [error, setError] = useState(false)
+  // const [error, setError] = useState(false)
     
   const handleOnFocus = () => {
     setFocused(true)
@@ -28,33 +28,33 @@ const Input = ({
     onBlur()
   }
   
-  const validateValue = (val) => {
-    if ( value === ''){
-      setError("Champs Obligatoire")
-    }
-    else {
-      setError(null)
-    }
-    if (type === "email") {
-      if (val.indexOf("@") === -1) {
-        setError("email is invalid")
-      }else {
-        setError(null)
-      }
-    }
-  }
+  // const validateValue = (val) => {
+  //   if ( value === ''){
+  //     setError("Champs Obligatoire")
+  //   }
+  //   else {
+  //     setError(null)
+  //   }
+  //   if (type === "email") {
+  //     if (val.indexOf("@") === -1) {
+  //       setError("email is invalid")
+  //     }else {
+  //       setError(null)
+  //     }
+  //   }
+  // }
   
-  const handleOnChange = (val) => {
-    validateValue(val)
-    onChange(val)
-  }
+  // const handleOnChange = (val) => {
+  //   validateValue(val)
+  //   onChange(val)
+  // }
 
   const renderLabel = () => {
     if (label) {
-      // if we have an error
-      if (error) {
-        return <label>{ error }</label>
-      }
+      // // if we have an error
+      // if (error) {
+      //   return <label>{ error }</label>
+      // }
       return <label>{ label }</label>      
     }
     return null
@@ -68,7 +68,7 @@ const Input = ({
         <InputSelect
           type={type}
           preference={['call', 'video']}
-          onChange={e => handleOnChange(e.target.value)}
+          // onChange={e => handleOnChange(e.target.value)}
           onFocus={handleOnFocus}
           onBlur={handleOnBlur}
           ref={ref => setRef(ref)}
@@ -81,10 +81,10 @@ const Input = ({
     }else if(type != "select"){
       return (
         <InputText
-          error={error}
+          // error={error}
           value={value}
           type={type}
-          onChange={e => handleOnChange(e.target.value)}
+          // onChange={e => handleOnChange(e.target.value)}
           onFocus={handleOnFocus}
           onBlur={handleOnBlur}
           ref={ref => setRef(ref)}
@@ -95,7 +95,7 @@ const Input = ({
   }
 
   return (
-    <InputContainer focused={isFocused} error={error}>
+    <InputContainer focused={isFocused}>
       { renderLabel() }       
       { inputType() }
     </InputContainer>
