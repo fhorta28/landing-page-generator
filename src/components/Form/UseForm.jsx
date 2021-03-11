@@ -10,34 +10,31 @@ const useForm = (callback, validate) => {
     companyName: '',
     contactPreference: '', 
   })
-  const [errors, setErrors] = useState({});
+  const [error, setError] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = e => {
     const { name, value } = e.target;
-    setValues({
-      ...values,
-      [name]: value
-    });
+    setValues({ ...values,[name]: value });
+    setError(validate(values));
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-
-    setErrors(validate(values));
+    setError(validate(values));
     setIsSubmitting(true);
   };
 
   useEffect(
     () => {
-      if (Object.keys(errors).length === 0 && isSubmitting) {
+      if (Object.keys(error).length === 0 && isSubmitting ) {
         callback();
       }
     },
-    [errors]
+    [error]
   );
 
-  return { handleChange, handleSubmit, values, errors };
+  return { handleChange, handleSubmit, values, error };
 };
 
 export default useForm;

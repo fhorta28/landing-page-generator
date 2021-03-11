@@ -43,7 +43,7 @@ export const InputContainer = styled.div`
     }
 
     ${props => props.focused && `
-      color: ${modalForm.form.textLabel}; 
+      color: ${modalForm.form.textLabelColor};
       border-radius: 3px;
       font-size: 12px;
       transform: translateY(-17px) translateX(-5px);
@@ -54,16 +54,20 @@ export const InputContainer = styled.div`
       font-size: 11px;
       }
     `}
+    ${props => props.error && `
+      color: red !important;
+      font-size: 13px;
+    `} 
   }
 `
 
 export const InputText = styled.input`
   width:90%;
-  border: ${props => props.errors ? '1px solid #e77674 !important': '1px solid #eee'};
+  border: ${props => props.error ? '1px solid #e77674 !important': '1px solid #eee'};
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   outline: none;
-  padding: 15px 5px;
+  padding: 15px 6px;
   box-sizing: border-box;
   font-size: 16px;
   transition: all 0.2s ease;
@@ -80,7 +84,7 @@ export const InputSelect = styled.select`
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   outline: none;
-  padding: 15px 3px 15px 3px;
+  padding: 12px 3px 12px 3px;
   box-sizing: border-box;
   font-size: 16px;
   transition: all 0.2s ease;
@@ -105,7 +109,14 @@ export const FormBtn = styled.button`
   cursor: pointer;
   font-size: 15px;
   margin: 5px ;
-  padding: 12px 20px;
+  padding: 10px 20px;
   &:focus { outline: none };
   &:hover { opacity: 0.9 };
+`
+export const ErrorMessage = styled.p`
+  color: ${modalForm.form.textErrorColor};
+  position: absolute;
+  right: 50px;
+  top: -2px;
+  font-size: 15px;
 `

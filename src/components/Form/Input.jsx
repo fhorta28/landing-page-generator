@@ -1,16 +1,16 @@
 import React, { useState }from 'react'
 
 //Intern
-import { InputContainer, InputText, InputSelect } from './style'
+import { InputContainer, InputText, InputSelect, ErrorMessage } from './style'
 
 const Input = ({
+    error,
     value,
     type,
     label,
     onChange,
     onFocus,
     onBlur,
-    setRef,
     preference,
     ...props
   }) => {
@@ -28,21 +28,7 @@ const Input = ({
     onBlur()
   }
   
-  // const validateValue = (val) => {
-  //   if ( value === ''){
-  //     setError("Champs Obligatoire")
-  //   }
-  //   else {
-  //     setError(null)
-  //   }
-  //   if (type === "email") {
-  //     if (val.indexOf("@") === -1) {
-  //       setError("email is invalid")
-  //     }else {
-  //       setError(null)
-  //     }
-  //   }
-  // }
+
   
   // const handleOnChange = (val) => {
   //   validateValue(val)
@@ -51,13 +37,12 @@ const Input = ({
 
   const renderLabel = () => {
     if (label) {
-      // // if we have an error
-      // if (error) {
-      //   return <label>{ error }</label>
-      // }
+     // if we have an error
+       if (error) {
+        return <label>{ error }</label>
+      }
       return <label>{ label }</label>      
     }
-    return null
   } 
   
   const isFocused = focused || String(value).length || type === "select"
@@ -68,10 +53,9 @@ const Input = ({
         <InputSelect
           type={type}
           preference={['call', 'video']}
-          // onChange={e => handleOnChange(e.target.value)}
+          onChange={onChange}
           onFocus={handleOnFocus}
           onBlur={handleOnBlur}
-          ref={ref => setRef(ref)}
           {...props}       
         > 
           <option value={preference}>Être rappelé.e</option>
@@ -81,13 +65,12 @@ const Input = ({
     }else if(type != "select"){
       return (
         <InputText
-          // error={error}
+          error={error}
           value={value}
           type={type}
-          // onChange={e => handleOnChange(e.target.value)}
+          onChange={onChange}
           onFocus={handleOnFocus}
           onBlur={handleOnBlur}
-          ref={ref => setRef(ref)}
           {...props} 
         />
       )      
@@ -95,7 +78,7 @@ const Input = ({
   }
 
   return (
-    <InputContainer focused={isFocused}>
+    <InputContainer focused={isFocused} onchange={onChange} error={error}>
       { renderLabel() }       
       { inputType() }
     </InputContainer>

@@ -1,23 +1,22 @@
 export default function validateInfo(values) {
-  let errors = {};
+  let error = {};
 
-  if (!values.firstname) {
-    errors.firstname = '*Prénom obligatoire';
+  if (!values.firstName) {
+    error.firstName = '*Prénom obligatoire';
   }
-  if (!values.firstname) {
-    errors.lastname = '*Nom obligatoire';
+  if (!values.lastName) {
+    error.lastName = '*Nom obligatoire';
   }
-  if (!values.nameCompagny) {
-    errors.nameCompagny = '*Nom entreprise obligatoire';
+  if (!values.companyName) {
+    error.companyName = '*Nom entreprise obligatoire';
   }
   if (!values.phoneNumber) {
-    errors.phoneNumber = '*Téléphone obligatoire';
+    error.phoneNumber = '*Téléphone obligatoire';
   }
   if (!values.email) {
-    errors.email = '*Email obligatoire';
+    error.email = '*Email obligatoire';
   } else if (!/\S+@\S+\.\S+/.test(values.email)) {
-    errors.email = 'Email invalide!';
+    error.email = 'Email invalide!';
   }
-
-  return errors;
+  return error;
 }

@@ -4,11 +4,11 @@ import React from 'react'
 import Input from './Input'
 import UseForm from "./UseForm";
 import validate from "./validateForm";
-import { FormContainer, FormBtn, ContainerBtn } from './style'
+import { FormContainer, FormBtn, ContainerBtn, ErrorMessage } from './style'
 
 const Form = () => {
 
-  const { handleChange, handleSubmit, values, errors } = UseForm(
+  const { handleChange, handleSubmit, values, error } = UseForm(
     submit,
     validate
   )
@@ -20,35 +20,43 @@ const Form = () => {
   return (
     <>
       <FormContainer>
-      <>
         <Input
+          error={error.firstName}
           label="Prénom"
+          name="firstName"
           type="text"
           value={values.firstName}
           onChange={handleChange}
-        />
-        { errors.firstname && <p> {errors.email} </p> }
-      </>
+        >
+        </Input>  
         <Input
+          error={error.lastName}
           label="Nom"
+          name="lastName"
           type="text"
           value={values.lastName}
           onChange={handleChange}
         />
         <Input
+          error={error.phoneNumber}
           label="Téléphone"
+          name="phoneNumber"
           type="text"
           value={values.phoneNumber}
           onChange={handleChange}
         />
         <Input
+          error={error.email}
           label="Email"
+          name="email"
           type="email"
           value={values.email}
           onChange={handleChange}
         />
         <Input
+          error={error.companyName}
           label="Nom entreprise"
+          name="companyName"
           type="text"
           value={values.companyName}
           onChange={handleChange}
