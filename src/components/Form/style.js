@@ -113,10 +113,3 @@ export const FormBtn = styled.button`
   &:focus { outline: none };
   &:hover { opacity: 0.9 };
 `
-export const ErrorMessage = styled.p`
-  color: ${modalForm.form.textErrorColor};
-  position: absolute;
-  right: 50px;
-  top: -2px;
-  font-size: 15px;
-`

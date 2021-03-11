@@ -4,7 +4,7 @@ import React from 'react'
 import Input from './Input'
 import UseForm from "./UseForm";
 import validate from "./validateForm";
-import { FormContainer, FormBtn, ContainerBtn, ErrorMessage } from './style'
+import { FormContainer, FormBtn, ContainerBtn } from './style'
 
 const Form = () => {
 
@@ -14,6 +14,7 @@ const Form = () => {
   )
 
   function submit() {
+    // Test submit
     console.log(values);
   }
 

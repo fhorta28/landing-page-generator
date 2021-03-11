@@ -1,7 +1,7 @@
 import React, { useState }from 'react'
 
 //Intern
-import { InputContainer, InputText, InputSelect, ErrorMessage } from './style'
+import { InputContainer, InputText, InputSelect } from './style'
 
 const Input = ({
     error,
@@ -11,13 +11,13 @@ const Input = ({
     onChange,
     onFocus,
     onBlur,
+    setRef,
     preference,
     ...props
   }) => {
 
   const [focused, setFocused] = useState(false)
-  // const [error, setError] = useState(false)
-    
+   
   const handleOnFocus = () => {
     setFocused(true)
     onFocus()
@@ -27,26 +27,18 @@ const Input = ({
     setFocused(false)
     onBlur()
   }
-  
-
-  
-  // const handleOnChange = (val) => {
-  //   validateValue(val)
-  //   onChange(val)
-  // }
 
   const renderLabel = () => {
-    if (label) {
-     // if we have an error
-       if (error) {
-        return <label>{ error }</label>
+      // if we have an error
+      if (!error) {
+        return  <label>{ label }</label>
+      } else {
+      return <label>{ error }</label>
       }
-      return <label>{ label }</label>      
-    }
-  } 
+  }
   
   const isFocused = focused || String(value).length || type === "select"
-  
+    // Input type 
   const inputType = () => {
     if(type === "select"){
       return (
@@ -56,13 +48,14 @@ const Input = ({
           onChange={onChange}
           onFocus={handleOnFocus}
           onBlur={handleOnBlur}
+          ref={ref => setRef(ref)}
           {...props}       
         > 
           <option value={preference}>Être rappelé.e</option>
           <option value={preference}>Recevoir une vidéo de présentation</option>
         </InputSelect>
       )  
-    }else if(type != "select"){
+    }else {
       return (
         <InputText
           error={error}
@@ -71,6 +64,7 @@ const Input = ({
           onChange={onChange}
           onFocus={handleOnFocus}
           onBlur={handleOnBlur}
+          
           {...props} 
         />
       )      
@@ -78,7 +72,7 @@ const Input = ({
   }
 
   return (
-    <InputContainer focused={isFocused} onchange={onChange} error={error}>
+    <InputContainer focused={isFocused} error={error}>
       { renderLabel() }       
       { inputType() }
     </InputContainer>
