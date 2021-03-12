@@ -33,35 +33,21 @@ export const ModalWrapper = styled.div`
 
 export const StyleModal = styled.div`
     width: 50vw;
-    height: 60vh;
+    max-height: 80vh;
     justify-content: center;
     align-items: center;
     background-color: ${modaleForm.modal.backgroundColor};
     color: ${modaleForm.modal.textColor};
     border-radius: 10px;
     box-shadow: 0 0 15px rgb(0 0 0 / 50%);
-    padding : 10px;
+    padding : 15px;
     overflow:hidden;
-
-    ${'' /* @keyframes bounce {
-      0% {
-        transform: scale(0.1);
-        opacity: 0;
-      }
-      60% {
-      transform: scale(1.2);
-      opacity: 1;
-      }
-      100% {
-        transform: scale(1);
-      }
-    } */}
     @media (max-width: 1024px) {
-    width: 45vw;
-    height: 60vh
+    
+    
     }
     @media (max-width: 768px) {
-    height: 70vh;
+    
     }
 `
 export const HeaderModal = styled.div`
@@ -73,6 +59,11 @@ export const HeaderModal = styled.div`
 `
 export const TitleModal = styled.h2`
     font-size: 20px;
+    @media (max-width: 1024px) {
+    width: 100%;
+    text-align:center;
+    
+  }
 `
 export const BtnClose = styled.div`
     cursor: pointer;

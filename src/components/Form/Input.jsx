@@ -64,7 +64,6 @@ const Input = ({
           onChange={onChange}
           onFocus={handleOnFocus}
           onBlur={handleOnBlur}
-          
           {...props} 
         />
       )      
