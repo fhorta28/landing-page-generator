@@ -5,8 +5,8 @@ import * as navbar from '../../variables/navbar'
 export const FormContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5px 5px;
-  margin-top: 20px;
+  grid-gap: 5px 0;
+  margin-top: 15px;
   margin-bottom: 5px;
   z-index: -1;
   
@@ -19,11 +19,12 @@ export const FormContainer = styled.div`
 
 export const InputContainer = styled.div`
   display:flex;
+  align-items: center;
   flex-direction: column;
   overflow: hidden;
   background-color:transparent;
   border-radius: 5px;
-  margin: 5px 5px;
+  padding-top: 20px;
   position: relative;
   transition: all 0.2s ease;  
   @media (max-width: 768px) {
@@ -34,16 +35,18 @@ export const InputContainer = styled.div`
     font-size: 18px;
     color: ${modalForm.form.textColor};
     position: absolute;
-    top: 12px;
-    left: 15px;
+    top: 30px;
+    left: 30px;
     transition: all 0.2s ease;
     z-index: 500;
     @media (max-width: 768px) {
+      left: 40px
       font-size: 13px;
     }
 
     ${props => props.focused && `
       color: ${modalForm.form.textLabelColor};
+      border: 1px solid #eee;
       border-radius: 3px;
       font-size: 12px;
       transform: translateY(-17px) translateX(-5px);
@@ -62,14 +65,13 @@ export const InputContainer = styled.div`
 `
 
 export const InputText = styled.input`
-  width:90%;
+  width:80%;
   border: ${props => props.error ? '1px solid #e77674 !important': '1px solid #eee'};
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   outline: none;
-  padding: 15px 6px;
-  box-sizing: border-box;
-  font-size: 16px;
+  padding: 10px 5px;
+  font-size: 15px;
   transition: all 0.2s ease;
   z-index: 500;
   cursor: pointer;
@@ -79,12 +81,12 @@ export const InputText = styled.input`
     }
 `
 export const InputSelect = styled.select`
-  width:90%;
+  width:80%;
   border: 1px solid #eee ;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   outline: none;
-  padding: 12px 3px 12px 3px;
+  padding: 12px 5px;
   box-sizing: border-box;
   font-size: 16px;
   transition: all 0.2s ease;
