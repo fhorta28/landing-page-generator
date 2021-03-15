@@ -14,3 +14,10 @@ export const bannerModal = {
 export const modalCloseIcon = {
     text :'times',
   }
+
+export const form = {
+  textColor: '#000000',
+  textLabel: 'rgba(255, 255, 255, 0.7)',
+  backgroundColorLabel:'',
+  backgroundColorInput: ''
+}
