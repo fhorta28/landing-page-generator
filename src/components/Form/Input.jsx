@@ -4,26 +4,26 @@ import React, { useState }from 'react'
 import { InputContainer, InputText, InputSelect } from './style'
 
 const Input = ({
-    error,
-    value,
-    type,
-    label,
-    onChange,
-    onFocus,
-    onBlur,
-    setRef,
-    preference,
-    ...props
+  error,
+  value,
+  type,
+  label,
+  onChange,
+  onFocus,
+  onBlur,
+  setRef,
+  preference,
+  ...props
   }) => {
 
   const [focused, setFocused] = useState(false)
    
-  const handleOnFocus = () => {
+  const handleFocus = () => {
     setFocused(true)
     onFocus()
   }  
   
-  const handleOnBlur = () => {
+  const handleBlur = () => {
     setFocused(false)
     onBlur()
   }
@@ -49,8 +49,8 @@ const Input = ({
           type={type}
           preference={['call', 'video']}
           onChange={onChange}
-          onFocus={handleOnFocus}
-          onBlur={handleOnBlur}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           ref={ref => setRef(ref)}
           {...props}       
         > 
@@ -65,8 +65,8 @@ const Input = ({
           value={value}
           type={type}
           onChange={onChange}
-          onFocus={handleOnFocus}
-          onBlur={handleOnBlur}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           {...props} 
         />
       )      

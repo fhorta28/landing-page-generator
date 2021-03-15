@@ -2,7 +2,7 @@ import React from 'react'
 
 //Intern
 import Input from './Input'
-import UseForm from "./UseForm";
+import UseForm from "./useForm";
 import validate from "./validateForm";
 import { FormContainer, FormBtn, ContainerBtn } from './style'
 

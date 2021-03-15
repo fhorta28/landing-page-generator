@@ -7,6 +7,7 @@ export const FormContainer = styled.div`
   height: 250px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  
   @media (max-width: 1024px) {
     margin-top: 10px;
   }  
@@ -27,7 +28,8 @@ export const InputContainer = styled.div`
   border-radius: 5px;
   padding-top: 20px;
   position: relative;
-  transition: all 0.2s ease; 
+  transition: all 0.2s ease;
+
   @media (max-width: 768px) {
     padding-top: 15px; 
   }
@@ -43,6 +45,7 @@ export const InputContainer = styled.div`
     left: 45px;
     transition: all 0.2s ease;
     z-index: 500;
+
     @media (max-width: 1024px) {
       top: 30px;
       left: 40px;
@@ -104,6 +107,7 @@ export const InputText = styled.input`
   transition: all 0.2s ease;
   z-index: 500;
   cursor: pointer;
+
   @media (max-width: 1024px) {
     padding: 10px 5px;
   } 
@@ -123,6 +127,7 @@ export const InputSelect = styled.select`
   transition: all 0.2s ease;
   z-index: 500;
   cursor: pointer;
+
   @media (max-width: 1024px) {
     padding: 10px 5px;
   } 
@@ -137,6 +142,7 @@ export const ContainerBtn = styled.div`
   justify-content : flex-end;
   align-items: center;
   margin : 0px 15px;
+
   @media (max-width: 768px) {
     justify-content : center;
   }
@@ -153,6 +159,7 @@ export const FormBtn = styled.button`
   padding: 10px 25px;
   &:focus { outline: none };
   &:hover { opacity: 0.9 };
+
   @media (max-width: 1024px) {
     padding: 10px 20px;
   } 
