@@ -8,16 +8,16 @@ import { FormContainer, FormBtn, ContainerBtn } from './style'
 
 const Form = () => {
 
-  const { handleChange, handleSubmit, values, error } = UseForm(
+  const { handleChange, handleSubmit, values, error, isValide } = UseForm(
     submit,
     validate
-  )
+  );
 
   function submit() {
     // Test submit
     console.log(values);
   }
-
+ 
   return (
     <>
       <FormContainer>
@@ -69,7 +69,7 @@ const Form = () => {
           onChange={handleChange}
         />
       </FormContainer>
-      <ContainerBtn><FormBtn type="submit" onClick={handleSubmit} >Envoyé</FormBtn></ContainerBtn>
+      <ContainerBtn><FormBtn type="submit" onClick={handleSubmit} noValidate>Envoyé</FormBtn></ContainerBtn>
     </>
   )
 }

@@ -29,12 +29,15 @@ const Input = ({
   }
 
   const renderLabel = () => {
+    if (label) {
       // if we have an error
-      if (!error) {
-        return  <label>{ label }</label>
-      } else {
-      return <label>{ error }</label>
+      if (error) {
+        return <label>{ error }</label>
       }
+
+      return <label>{ label }</label>      
+    }
+    return null
   }
   
   const isFocused = focused || String(value).length || type === "select"

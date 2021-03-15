@@ -16,14 +16,29 @@ const useForm = (callback, validate) => {
   const handleChange = e => {
     const { name, value } = e.target;
     setValues({ ...values,[name]: value });
-    setError(validate(values));
-  };
+    const val = isValide(name,value);
+    setError({...values,[name]: val })
+    console.log(error) 
+  }
+
+  const isValide = (name, value) => {
+    if( value === ''){
+    return translateForm(name)
+    }
+    return null
+  }
+
+  const translateForm = (name) => {
+    if(name === "firstName"){
+      return 'Prénom obligatoire';
+    }
+  }
 
   const handleSubmit = e => {
     e.preventDefault();
     setError(validate(values));
     setIsSubmitting(true);
-  };
+  }
 
   useEffect(
     () => {
@@ -31,7 +46,7 @@ const useForm = (callback, validate) => {
         callback();
       }
     },
-    [error]
+    []
   );
 
   return { handleChange, handleSubmit, values, error };
