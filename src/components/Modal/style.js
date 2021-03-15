@@ -6,6 +6,7 @@ import * as modaleForm from'../../variables/modalForm'
 
 export const ModalWrapper = styled.div`
     display: flex;
+    z-index: 1;
     justify-content: center;
     align-items: center;
     position:fixed;
