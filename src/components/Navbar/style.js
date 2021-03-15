@@ -58,7 +58,6 @@ export const ContainerBtn = styled.div`
   width : 100vw;
   background-color:${navbar.navStyle.backgroundColor}; 
   }
-
 ` 
 
 
@@ -72,7 +71,6 @@ export const NavBtn = styled.button`
   padding: 12px 18px;
   &:focus { outline: none };
   &:hover { opacity: 0.9 };
-  
 `
 
 export const StyleBurger = styled.div`
@@ -87,7 +85,7 @@ export const StyleBurger = styled.div`
 
   @media (max-width: 768px){
     display: flex;
-    z-index: 2;
+    z-index: 1;
   }
   
 `

@@ -3,9 +3,10 @@ import * as modalForm from '../../variables/modalForm'
 import * as navbar from '../../variables/navbar'
 
 export const FormContainer = styled.div`
+  padding: 10px;
+  height: 250px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin:15px;
   @media (max-width: 1024px) {
     margin-top: 10px;
   }  
@@ -14,6 +15,9 @@ export const FormContainer = styled.div`
     margin-bottom: 0;
     grid-gap: 0;
   }
+  @media (max-width: 560px) {
+    height: 400px;
+    }
 `
 export const InputContainer = styled.div`
   display:flex;
@@ -26,6 +30,9 @@ export const InputContainer = styled.div`
   transition: all 0.2s ease; 
   @media (max-width: 768px) {
     padding-top: 15px; 
+  }
+  @media (max-width: 560px) {
+    padding-top: 5px;
   }
 
   & > label {
