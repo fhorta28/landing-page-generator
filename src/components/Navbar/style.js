@@ -48,6 +48,7 @@ export const ContainerBtn = styled.div`
   
   @media (max-width: 768px){
   margin: 0 auto;
+  z-index:1;
   flex-flow: column nowrap;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'}; 
   align-items: center;
