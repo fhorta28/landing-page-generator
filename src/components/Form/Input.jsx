@@ -4,93 +4,82 @@ import React, { useState }from 'react'
 import { InputContainer, InputText, InputSelect } from './style'
 
 const Input = ({
-    value,
-    type,
-    label,
-    onChange,
-    onFocus,
-    onBlur,
-    setRef,
-    preference,
-    ...props
+  error,
+  value,
+  type,
+  label,
+  onChange,
+  onFocus,
+  onBlur,
+  setRef,
+  preference,
+  ...props
   }) => {
-    const [focused, setFocused] = useState(false)
-    const [error, setError] = useState(null)
+
+  const [focused, setFocused] = useState(false)
+   
+  const handleFocus = () => {
+    setFocused(true)
+    onFocus()
+  }  
   
-    const handleOnFocus = () => {
-      setFocused(true)
-      onFocus()
-    }  
-  
-    const handleOnBlur = () => {
-      setFocused(false)
-      onBlur()
-    }
-  
-    const validateValue = (val) => {
-      if (type === "email") {
-        // email validation
-        if (val.indexOf("@") === -1) {
-          setError("email invalide")
-        } else {
-          setError(null)
-        }
-      }
-      // add validation conditions for phoneNumber & for submit form after
-    }
-  
-    const handleOnChange = (val) => {
-      validateValue(val)
-      onChange(val)
-    }
-  
-    const renderLabel = () => {
-      if (label) {
-        // if we have an error
-        if (error) {
-          return <label>{ error }</label>
-        }
-  
-        return <label>{ label }</label>      
-      }
-      return null
-    } 
-  
-    const isFocused = focused || String(value).length || type === "select"
-  
-    const inputType = () => {
-      if(type === "select"){
-        return  <InputSelect
-                  type={type}
-                  preference={['call', 'video']}
-                  onChange={e => handleOnChange(e.target.value)}
-                  onFocus={handleOnFocus}
-                  onBlur={handleOnBlur}
-                  ref={ref => setRef(ref)}
-                  {...props}       
-                > 
-                  <option value={preference}>Être rappelé.e</option>
-                  <option value={preference}>Recevoir une vidéo de présentation</option>
-                </InputSelect>  
-      } else if(type != "select"){
-        return  <InputText 
-                  value={value}
-                  type={type}
-                  onChange={e => handleOnChange(e.target.value)}
-                  onFocus={handleOnFocus}
-                  onBlur={handleOnBlur}
-                  ref={ref => setRef(ref)}
-                  {...props} 
-                />      
-              }
-    }
-    return (
-      <InputContainer focused={isFocused} error={error}>
-        { renderLabel() }       
-        { inputType() }
-      </InputContainer>
-    )
+  const handleBlur = () => {
+    setFocused(false)
+    onBlur()
   }
+
+  const renderLabel = () => {
+    if (label) {
+      // if we have an error
+      if (error) {
+        return <label>{ error }</label>
+      }
+
+      return <label>{ label }</label>      
+    }
+    return null
+  }
+  
+  const isFocused = focused || String(value).length || type === "select"
+    // Input type 
+  const inputType = () => {
+    if(type === "select"){
+      return (
+        <InputSelect
+          type={type}
+          preference={['call', 'video']}
+          onChange={onChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          ref={ref => setRef(ref)}
+          {...props}       
+        > 
+          <option value={preference}>Être rappelé.e</option>
+          <option value={preference}>Recevoir une vidéo de présentation</option>
+        </InputSelect>
+      )  
+    }else {
+      return (
+        <InputText
+          error={error}
+          value={value}
+          type={type}
+          onChange={onChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          {...props} 
+        />
+      )      
+    }
+  }
+
+  return (
+    <InputContainer focused={isFocused} error={error}>
+      { renderLabel() }       
+      { inputType() }
+    </InputContainer>
+  )
+}
   
   Input.defaultProps = {
     type: "",

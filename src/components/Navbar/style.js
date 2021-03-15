@@ -3,8 +3,6 @@ import styled from 'styled-components'
 //Variables
 import * as navbar from '../../variables/navbar'
 
-
-
 export const Nav = styled.nav`
   width: 100%;
   height: 65px;
@@ -24,12 +22,10 @@ export const ContainerBrand = styled.div`
   justify-content: space-around;
   width : ${navbar.containerLogoSlogan.width};
   margin :  0 15px;
-  
 `
 export const Logo = styled.img`
   width: ${navbar.logo.height};
   height: ${navbar.logo.width};
-  
 `
 export const Slogan = styled.div`
   display: flex;
@@ -45,7 +41,6 @@ export const ContainerBtn = styled.div`
   justify-content : flex-end;
   align-items: center;
   margin : 0 15px;
-  
   @media (max-width: 768px){
   margin: 0 auto;
   flex-flow: column nowrap;
@@ -58,7 +53,6 @@ export const ContainerBtn = styled.div`
   width : 100vw;
   background-color:${navbar.navStyle.backgroundColor}; 
   }
-
 ` 
 
 
@@ -72,7 +66,6 @@ export const NavBtn = styled.button`
   padding: 12px 18px;
   &:focus { outline: none };
   &:hover { opacity: 0.9 };
-  
 `
 
 export const StyleBurger = styled.div`
@@ -84,14 +77,9 @@ export const StyleBurger = styled.div`
   justify-content: center;
   background-color: ${({ open }) => open ? navbar.btn.backgroundColorOnclick : navbar.btn.backgroundColor}; 
   border-radius: 3px;
-
   @media (max-width: 768px){
     display: flex;
-    z-index: 2;
+    z-index: 1;
   }
   
 `
-
-
-
-
