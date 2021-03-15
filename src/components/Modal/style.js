@@ -31,7 +31,6 @@ export const ModalWrapper = styled.div`
   }
   }
 `
-
 export const StyleModal = styled.div`
     width: 50vw;
     height: 65vh;
@@ -75,7 +74,7 @@ export const HeaderModal = styled.div`
 `
 export const TitleModal = styled.h2`
     font-size: 25px;
-    
+
     @media (max-width: 1024px) {
     width: 100%;
     text-align:center; 
