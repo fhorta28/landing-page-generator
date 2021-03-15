@@ -17,8 +17,9 @@ const useForm = (callback, validate) => {
     const { name, value } = e.target;
     setValues({ ...values,[name]: value });
     const val = isValide(name,value);
-    setError({...values,[name]: val })
-    console.log(error) 
+    setError((prevState) => {
+      return ({...prevState, [name]: val})
+    })
   }
 
   const isValide = (name, value) => {
@@ -31,6 +32,18 @@ const useForm = (callback, validate) => {
   const translateForm = (name) => {
     if(name === "firstName"){
       return 'Prénom obligatoire';
+    }
+    else if(name === "lastName"){
+      return 'Nom obligatoire';
+    }
+    else if(name === "companyName"){
+      return "Nom de l'entreprise obligatoire";
+    }
+    else if(name === "phoneNumber"){
+      return "Numéro de téléphone obligatoire";
+    }
+    else if(name === "email"){
+      return "Email obligatoire";
     }
   }
 
@@ -49,7 +62,7 @@ const useForm = (callback, validate) => {
     []
   );
 
-  return { handleChange, handleSubmit, values, error };
+  return { handleChange, handleSubmit, values, error, isSubmitting };
 };
 
 export default useForm;
