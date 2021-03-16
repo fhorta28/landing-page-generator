@@ -54,8 +54,6 @@ export const ContainerBtn = styled.div`
   background-color:${navbar.navStyle.backgroundColor}; 
   }
 ` 
-
-
 export const NavBtn = styled.button`
   background-color: ${navbar.btn.backgroundColor};
   border: none;
