@@ -19,15 +19,15 @@ export const ModalWrapper = styled.div`
   forwards;
 
   @keyframes unfoldIn {
-  0% {
+    0% {
     transform:scaleY(.005) scaleX(0);
-  }
-  50% {
+    }
+    50% {
     transform:scaleY(.005) scaleX(1);
-  }
-  100% {
+    }
+    100% {
     transform:scaleY(1) scaleX(1);
-  }
+    }
   }
 `
 
@@ -71,6 +71,11 @@ export const HeaderModal = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid;
+
+  @media (max-width: 1024px) {
+  width: 80%;
+  text-align:center; 
+  }
 `
 export const TitleModal = styled.h2`
   font-size: 25px;
