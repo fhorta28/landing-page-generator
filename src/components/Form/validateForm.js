@@ -1,7 +1,6 @@
 export default function validateInfo(value) {
   let error = {};
-
-  if (!value.firstName || value.firstName === '' ) {
+  if (!value.firstName ) {
     error.firstName = 'Prénom obligatoire';
   }
   if (!value.lastName) {

@@ -4,37 +4,40 @@ import React, { useState }from 'react'
 import { InputContainer, InputText, InputSelect } from './style'
 
 const Input = ({
-    error,
-    value,
-    type,
-    label,
-    onChange,
-    onFocus,
-    onBlur,
-    setRef,
-    preference,
-    ...props
+  error,
+  value,
+  type,
+  label,
+  onChange,
+  onFocus,
+  onBlur,
+  setRef,
+  preference,
+  ...props
   }) => {
 
   const [focused, setFocused] = useState(false)
    
-  const handleOnFocus = () => {
+  const handleFocus = () => {
     setFocused(true)
     onFocus()
   }  
   
-  const handleOnBlur = () => {
+  const handleBlur = () => {
     setFocused(false)
     onBlur()
   }
 
   const renderLabel = () => {
+    if (label) {
       // if we have an error
-      if (!error) {
-        return  <label>{ label }</label>
-      } else {
-      return <label>{ error }</label>
+      if (error) {
+        return <label>{ error }</label>
       }
+
+      return <label>{ label }</label>      
+    }
+    return null
   }
   
   const isFocused = focused || String(value).length || type === "select"
@@ -46,8 +49,8 @@ const Input = ({
           type={type}
           preference={['call', 'video']}
           onChange={onChange}
-          onFocus={handleOnFocus}
-          onBlur={handleOnBlur}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           ref={ref => setRef(ref)}
           {...props}       
         > 
@@ -62,8 +65,8 @@ const Input = ({
           value={value}
           type={type}
           onChange={onChange}
-          onFocus={handleOnFocus}
-          onBlur={handleOnBlur}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           {...props} 
         />
       )      

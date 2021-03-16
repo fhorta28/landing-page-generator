@@ -2,27 +2,27 @@ import React from 'react'
 
 //Intern
 import Input from './Input'
-import UseForm from "./UseForm";
+import UseForm from "./useForm";
 import validate from "./validateForm";
 import { FormContainer, FormBtn, ContainerBtn } from './style'
 
 const Form = () => {
 
-  const { handleChange, handleSubmit, values, error } = UseForm(
+  const { handleChange, handleSubmit, values, error, isSubmitting } = UseForm(
     submit,
     validate
-  )
+  );
 
   function submit() {
     // Test submit
     console.log(values);
   }
-
+ 
   return (
     <>
       <FormContainer>
         <Input
-          error={error.firstName}
+          error={isSubmitting && error.firstName}
           label="Prénom"
           name="firstName"
           type="text"
@@ -31,7 +31,7 @@ const Form = () => {
         >
         </Input>  
         <Input
-          error={error.lastName}
+          error={isSubmitting && error.lastName}
           label="Nom"
           name="lastName"
           type="text"
@@ -39,7 +39,7 @@ const Form = () => {
           onChange={handleChange}
         />
         <Input
-          error={error.phoneNumber}
+          error={isSubmitting && error.phoneNumber}
           label="Téléphone"
           name="phoneNumber"
           type="text"
@@ -47,7 +47,7 @@ const Form = () => {
           onChange={handleChange}
         />
         <Input
-          error={error.email}
+          error={isSubmitting && error.email}
           label="Email"
           name="email"
           type="email"
@@ -55,7 +55,7 @@ const Form = () => {
           onChange={handleChange}
         />
         <Input
-          error={error.companyName}
+          error={isSubmitting && error.companyName}
           label="Nom entreprise"
           name="companyName"
           type="text"
@@ -69,7 +69,7 @@ const Form = () => {
           onChange={handleChange}
         />
       </FormContainer>
-      <ContainerBtn><FormBtn type="submit" onClick={handleSubmit} >Envoyé</FormBtn></ContainerBtn>
+      <ContainerBtn><FormBtn type="submit" onClick={handleSubmit} noValidate>Envoyé</FormBtn></ContainerBtn>
     </>
   )
 }

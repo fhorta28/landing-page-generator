@@ -3,9 +3,11 @@ import * as modalForm from '../../variables/modalForm'
 import * as navbar from '../../variables/navbar'
 
 export const FormContainer = styled.div`
+  padding: 10px;
+  height: 250px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin:15px;
+  
   @media (max-width: 1024px) {
     margin-top: 10px;
   }  
@@ -14,6 +16,9 @@ export const FormContainer = styled.div`
     margin-bottom: 0;
     grid-gap: 0;
   }
+  @media (max-width: 560px) {
+    height: 400px;
+    }
 `
 export const InputContainer = styled.div`
   display:flex;
@@ -23,9 +28,13 @@ export const InputContainer = styled.div`
   border-radius: 5px;
   padding-top: 20px;
   position: relative;
-  transition: all 0.2s ease; 
+  transition: all 0.2s ease;
+
   @media (max-width: 768px) {
     padding-top: 15px; 
+  }
+  @media (max-width: 560px) {
+    padding-top: 5px;
   }
 
   & > label {
@@ -36,6 +45,7 @@ export const InputContainer = styled.div`
     left: 45px;
     transition: all 0.2s ease;
     z-index: 500;
+
     @media (max-width: 1024px) {
       top: 30px;
       left: 40px;
@@ -97,6 +107,7 @@ export const InputText = styled.input`
   transition: all 0.2s ease;
   z-index: 500;
   cursor: pointer;
+
   @media (max-width: 1024px) {
     padding: 10px 5px;
   } 
@@ -116,6 +127,7 @@ export const InputSelect = styled.select`
   transition: all 0.2s ease;
   z-index: 500;
   cursor: pointer;
+
   @media (max-width: 1024px) {
     padding: 10px 5px;
   } 
@@ -130,6 +142,7 @@ export const ContainerBtn = styled.div`
   justify-content : flex-end;
   align-items: center;
   margin : 0px 15px;
+
   @media (max-width: 768px) {
     justify-content : center;
   }
@@ -146,6 +159,7 @@ export const FormBtn = styled.button`
   padding: 10px 25px;
   &:focus { outline: none };
   &:hover { opacity: 0.9 };
+
   @media (max-width: 1024px) {
     padding: 10px 20px;
   } 
