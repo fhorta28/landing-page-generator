@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 
 export const SectionContainer = styled.div`
+  width:100%;
   height:180vh;
   border-top: 1px solid #e0e0e0;
   display: flex;
