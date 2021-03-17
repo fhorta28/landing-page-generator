@@ -4,7 +4,7 @@ import React, { useEffect } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 // Intern
-import { SectionContainer, Title,SubTitle, ServicesContainer,ServicesBox, ServicesDescription, ImgServices, BtnContainer } from './style'
+import { SectionContainer, Title, ServicesContainer, ServicesBox, ServicesBox2, ServicesDescription, TitleDescription, Description, ImgServices, BtnContainer } from './style'
 //Variables
 import image from '../../variables/assets/idea.svg'
 import image2 from '../../variables/assets/requirement.svg'
@@ -22,17 +22,25 @@ const SectionServices = () => {
     <SectionContainer>
       <Title>Smarter PR with powerful, easy-to-use software</Title>
       <ServicesContainer>
-        <SubTitle>Find the right journalists to pitch</SubTitle>
         <ServicesBox>
-          <ServicesDescription>Lorem iServicesDescriStionsum dolor sit amet, consectetur adiServicesDescriStioniscing elit. ServicesDescriStionhasellus </ServicesDescription>
+          <ServicesDescription>
+            <TitleDescription>Lorem ipsum dolor sit amet.</TitleDescription>
+            <Description>Quisque id ornare urna. Vestibulum accumsan tortor et ipsum dapibus, ac malesuada sapien volutpat. Curabitur rutrum mollis urna. Nam tincidunt tellus sit amet erat pretium, non imperdiet turpis mattis. Proin vel justo libero. Ut non malesuada felis. Nullam non odio.</Description> 
+          </ServicesDescription>
           <ImgServices data-aos="fade-left" data-aos-delay="900" src={image}/>
         </ServicesBox>
-        <ServicesBox>
+        <ServicesBox2>
+          <ServicesDescription>
+            <TitleDescription>Lorem ipsum dolor sit amet.</TitleDescription>
+            <Description>Quisque id ornare urna. Vestibulum accumsan tortor et ipsum dapibus, ac malesuada sapien volutpat. Curabitur rutrum mollis urna. Nam tincidunt tellus sit amet erat pretium, non imperdiet turpis mattis. Proin vel justo libero. Ut non malesuada felis. Nullam non odio.</Description> 
+          </ServicesDescription>
           <ImgServices data-aos="fade-right" data-aos-delay="900" src={image2}/>
-          <ServicesDescription>Lorem iServicesDescriStionsum dolor sit amet, consectetur adiServicesDescriStioniscing elit. ServicesDescriStionhasellus </ServicesDescription>
-        </ServicesBox>
+        </ServicesBox2>
         <ServicesBox>
-          <ServicesDescription>Lorem iServicesDescriStionsum dolor sit amet, consectetur adiServicesDescriStioniscing elit. ServicesDescriStionhasellus </ServicesDescription>
+          <ServicesDescription>
+            <TitleDescription>Lorem ipsum dolor sit amet.</TitleDescription>
+            <Description>Quisque id ornare urna. Vestibulum accumsan tortor et ipsum dapibus, ac malesuada sapien volutpat. Curabitur rutrum mollis urna. Nam tincidunt tellus sit amet erat pretium, non imperdiet turpis mattis. Proin vel justo libero. Ut non malesuada felis. Nullam non odio.</Description> 
+          </ServicesDescription>
           <ImgServices data-aos="fade-left" data-aos-delay="900" src={image3}/>
         </ServicesBox>
       </ServicesContainer>
