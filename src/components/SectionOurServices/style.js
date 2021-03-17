@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-//Variables 
-
 
 export const SectionContainer = styled.div`
   height:180vh;
