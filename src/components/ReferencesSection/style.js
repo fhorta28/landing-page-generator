@@ -8,13 +8,13 @@ export const ReferencesContainer = styled.div`
   justify-content:center;
 
   @media (max-width: 1024px) {
-  height:30vh;
+    height:30vh;
   } 
   @media (max-width: 768px) {
-  height:25vh;
+    height:25vh;
   }
   @media (max-width: 560px) {
-  height:20vh;
+    height:20vh;
   }   
 `
 export const Title = styled.h2`
@@ -26,13 +26,13 @@ export const Title = styled.h2`
   text-align:center;
   
   @media (max-width: 1024px) {
-  font-size:20px;
+    font-size:20px;
   } 
   @media (max-width: 768px) {
-  font-size:18px;
+    font-size:18px;
   }
   @media (max-width: 560px) {
-  font-size:15px;
+    font-size:15px;
   } 
 `
 export const LogoContainer = styled.div`
@@ -45,15 +45,15 @@ export const LogoCompagnie = styled.img`
   height:70px;
 
   @media (max-width: 1024px) {
-  width:50px;
-  height:50px;
+    width:50px;
+    height:50px;
   } 
   @media (max-width: 768px) {
-  width:35px;
-  height:40px;
+    width:35px;
+     height:40px;
   }
   @media (max-width: 560px) {
-  width:30px;
-  height:30px;
+    width:30px;
+    height:30px;
   } 
 `
