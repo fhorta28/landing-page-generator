@@ -1,9 +1,7 @@
 // Base
 import React from 'react'
-
 // Intern
 import { ReferencesContainer, Title, LogoContainer, LogoCompagnie } from './style'
-
 //Variables
 import discord from '../../variables/assets/discord.svg'
 import symbols1 from '../../variables/assets/symbols-1.svg'
@@ -13,8 +11,6 @@ import reddit from '../../variables/assets/reddit-logo.svg'
 import slack from '../../variables/assets/slack.svg'
 import symbols from '../../variables/assets/symbols.svg'
 import github from '../../variables/assets/github.svg'
-
-
 
 const ReferencesSection = () => {
 
