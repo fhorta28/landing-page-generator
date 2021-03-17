@@ -39,18 +39,19 @@ export const ContainerBtn = styled.div`
   justify-content : flex-end;
   align-items: center;
   margin : 0 15px;
+
   @media (max-width: 768px){
-  margin: 0 auto;
-  flex-flow: column nowrap;
-  transform: ${({ open }) => !open ? 'translateX(0)' : 'translateX(100%)'};
-  z-index:1;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  height : 100vh;
-  width : 100vw;
-  background-color:${navbar.navStyle.backgroundColor}; 
+    margin: 0 auto;
+    flex-flow: column nowrap;
+    transform: ${({ open }) => !open ? 'translateX(0)' : 'translateX(100%)'};
+    z-index:1;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    height : 100vh;
+    width : 100vw;
+    background-color:${navbar.navStyle.backgroundColor}; 
   }
 ` 
 export const NavBtn = styled.button`
@@ -73,6 +74,7 @@ export const StyleBurger = styled.div`
   justify-content: center;
   background-color: ${({ open }) => open ? navbar.btn.backgroundColorOnclick : navbar.btn.backgroundColor}; 
   border-radius: 3px;
+  
   @media (max-width: 768px){
     display: flex;
     z-index: 1;
