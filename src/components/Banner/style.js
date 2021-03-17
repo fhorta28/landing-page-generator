@@ -12,9 +12,9 @@ export const Container = styled.div`
   padding: 0 50px;
 
   @media (max-width: 768px) {
-  justify-content : center;
-  flex-wrap: wrap;
-  padding: 0 10px;
+    justify-content : center;
+    flex-wrap: wrap;
+    padding: 0 10px;
   }
 `
 export const Image = styled.img`
@@ -28,27 +28,27 @@ export const LeftContainer = styled.div`
   align-items:center;
  
   @media (max-width: 768px) {
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  height: 45%;
-  width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height: 45%;
+    width:100%;
   }
 `
 export const RightContainer = styled.div`
   position: relative;
-  width:50%;
-  height:400px;
+    width:50%;
+    height:400px;
 
   @media (max-width: 1024px) {
-  width:450px;
+    width:450px;
   } 
   @media (max-width: 768px) {
-  width:350px;
-  height:55%;
+    width:350px;
+    height:55%;
   }
   @media (max-width: 560px) {
-  width:300px;
+    width:300px;
   }
 `
 export const SubTitle = styled.p`
@@ -59,16 +59,16 @@ export const SubTitle = styled.p`
   padding: 10px 20px;
 
   @media (max-width: 1024px) {
-  padding: 10px 20px;
+    padding: 10px 20px;
   } 
   @media (max-width: 768px) {
-  padding: 15px 15px;
+    padding: 15px 15px;
   }
   @media (max-width: 560px) {
-  text-align:center;
-  font-size: 18px;
-  font-weight: 400;
-  margin: 5px 0 10px 0;
+    text-align:center;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 5px 0 10px 0;
   }
 `
 export const Title = styled.h1`
@@ -78,17 +78,17 @@ export const Title = styled.h1`
   margin: 0;
 
   @media (max-width: 1024px) {
-  font-size: 40px; 
-  padding: 5px 10px;
+    font-size: 40px; 
+    padding: 5px 10px;
   } 
   @media (max-width: 768px) {
-  font-size: 35px;
-  padding: 8px 15px;
+    font-size: 35px;
+    padding: 8px 15px;
   }
   @media (max-width: 560px) {
-  text-align:center;
-  font-size: 30px;
-  font-weight: 400;
-  margin: 5px 0 5px 0;
+    text-align:center;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 5px 0 5px 0;
   }
 `
