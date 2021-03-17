@@ -50,7 +50,7 @@ export const LogoCompagnie = styled.img`
   } 
   @media (max-width: 768px) {
     width:35px;
-     height:40px;
+    height:40px;
   }
   @media (max-width: 560px) {
     width:30px;
