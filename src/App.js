@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import Banner from './components/Banner'
 import Navbar from './components/Navbar'
 import Modal from './components/Modal'
+import ReferencesSection from './components/ReferencesSection'
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Navbar openModal={toogleModal} />
         { showModal && <Modal closeModal={toogleModal} /> }
       <Banner openModal={toogleModal} />
+      <ReferencesSection/>
     </>
   )
 }
