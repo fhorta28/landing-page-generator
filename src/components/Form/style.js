@@ -18,7 +18,7 @@ export const FormContainer = styled.div`
   }
   @media (max-width: 560px) {
     height: 400px;
-    }
+  }
 `
 export const InputContainer = styled.div`
   display:flex;
