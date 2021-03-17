@@ -11,7 +11,7 @@ import * as navbar from '../../variables/navbar';
 
 const Menu = ({openModal}) => {
 
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
 
     return (
          <>
@@ -19,7 +19,7 @@ const Menu = ({openModal}) => {
               <NavBtn onClick= {openModal}>{navbar.btn.content}</NavBtn> 
             </ContainerBtn>
             <StyleBurger open= {open} onClick={()=> setOpen(!open)}>
-              <FontAwesomeIcon icon={navbar.burgerIcon.text} size="2x"/>
+              <FontAwesomeIcon icon={open ? navbar.burgerIcon.text :'times'} size="2x"/>
             </StyleBurger>
          </> 
     )
