@@ -47,21 +47,21 @@ export const StyleModal = styled.div`
   overflow:hidden;
 
   @media (max-width: 1024px) {
-  width: 60vw;
-  height: 70vh;
+    width: 60vw;
+    height: 70vh;
   }
   @media (max-width: 768px) {
-  padding: 20px;
-  width: 80vw;
-  height: 70vh;
-  box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+    padding: 20px;
+    width: 80vw;
+    height: 70vh;
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
   }
   @media (max-width: 560px) {
-  justify-content:center;
-  padding: 20px;
-  width: 100vw;
-  height: 100vh;
-  box-shadow: 0 0 5px rgb(0 0 0 / 50%);
+    justify-content:center;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: 0 0 5px rgb(0 0 0 / 50%);
   }
 `
 export const HeaderModal = styled.div`
@@ -73,16 +73,16 @@ export const HeaderModal = styled.div`
   border-bottom: 1px solid;
 
   @media (max-width: 1024px) {
-  width: 80%;
-  text-align:center; 
+    width: 80%;
+    text-align:center; 
   }
 `
 export const TitleModal = styled.h2`
   font-size: 25px;
     
   @media (max-width: 1024px) {
-  width: 100%;
-  text-align:center; 
+    width: 100%;
+    text-align:center; 
   }
 `
 export const BtnClose = styled.div`
