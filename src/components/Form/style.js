@@ -9,15 +9,14 @@ export const FormContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   
   @media (max-width: 1024px) {
-    margin-top: 10px;
+  margin-top: 10px;
   }  
   @media (max-width: 767px) {
-    grid-template-columns: 1fr;
-    margin-bottom: 0;
-    grid-gap: 0;
+  grid-template-columns: 1fr;
+  grid-gap: 0;
   }
   @media (max-width: 560px) {
-    height: 400px;
+  height: 400px;
   }
 `
 export const InputContainer = styled.div`
@@ -31,10 +30,10 @@ export const InputContainer = styled.div`
   transition: all 0.2s ease;
 
   @media (max-width: 768px) {
-    padding-top: 15px; 
+  padding-top: 10px; 
   }
   @media (max-width: 560px) {
-    padding-top: 5px;
+  padding-top: 5px;
   }
 
   & > label {
@@ -47,17 +46,17 @@ export const InputContainer = styled.div`
     z-index: 500;
 
     @media (max-width: 1024px) {
-      top: 30px;
-      left: 40px;
+    top: 30px;
+    left: 40px;
     } 
     @media (max-width: 768px) {
-      top: 25px;
-      left: 50px;
-      font-size: 16px;
+    top: 20px;
+    left: 50px;
+    font-size: 16px;
     }
     @media (max-width: 568px) {
-      top: 20px;
-      left: 40px;
+    top: 15px;
+    left: 40px;
     }
 
     ${props => props.focused && `
@@ -85,9 +84,9 @@ export const InputContainer = styled.div`
       font-weight:600;
 
       // Xsmall devices (smartphones phones, 576px and down)
-      @media (max-width: 567px) { top: 25px; left: 40px; font-size: 10px;}
+      @media (max-width: 567px) { top: 15px; left: 40px; font-size: 10px;}
       // Small devices (landscape phones, (568px and up)
-      @media (min-width: 568px) { top: 25px; left: 45px; font-size: 10px;}
+      @media (min-width: 568px) { top: 20px; left: 45px; font-size: 10px;}
       // Medium devices (tablets, 768px and up)
       @media (min-width: 768px) { top: 30px; left: 30px; font-size: 11px; }
       // Large devices (desktops, 992px and up)
@@ -109,10 +108,10 @@ export const InputText = styled.input`
   cursor: pointer;
 
   @media (max-width: 1024px) {
-    padding: 10px 5px;
+  padding: 10px 5px;
   } 
   @media (max-width: 768px) {
-    padding: 8px 2px;
+  padding: 8px 2px;
   }
 `
 export const InputSelect = styled.select`
@@ -129,10 +128,10 @@ export const InputSelect = styled.select`
   cursor: pointer;
 
   @media (max-width: 1024px) {
-    padding: 10px 5px;
+  padding: 10px 5px;
   } 
   @media (max-width: 768px) {
-    padding: 8px 2px; 
+  padding: 8px 2px; 
   }
 `
 
@@ -144,7 +143,7 @@ export const ContainerBtn = styled.div`
   margin : 0px 15px;
 
   @media (max-width: 768px) {
-    justify-content : center;
+  justify-content : center;
   }
 `
 
@@ -161,9 +160,9 @@ export const FormBtn = styled.button`
   &:hover { opacity: 0.9 };
 
   @media (max-width: 1024px) {
-    padding: 10px 20px;
+  padding: 10px 20px;
   } 
   @media (max-width: 768px) {
-    padding: 8px 15px;
+  padding: 8px 15px;
   }
 `
