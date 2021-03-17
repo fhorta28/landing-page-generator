@@ -13,12 +13,11 @@ export const FormContainer = styled.div`
   }  
   @media (max-width: 767px) {
     grid-template-columns: 1fr;
-    margin-bottom: 0;
     grid-gap: 0;
   }
   @media (max-width: 560px) {
     height: 400px;
-    }
+  }
 `
 export const InputContainer = styled.div`
   display:flex;
@@ -31,7 +30,7 @@ export const InputContainer = styled.div`
   transition: all 0.2s ease;
 
   @media (max-width: 768px) {
-    padding-top: 15px; 
+    padding-top: 10px; 
   }
   @media (max-width: 560px) {
     padding-top: 5px;
@@ -51,12 +50,12 @@ export const InputContainer = styled.div`
       left: 40px;
     } 
     @media (max-width: 768px) {
-      top: 25px;
+      top: 20px;
       left: 50px;
       font-size: 16px;
     }
     @media (max-width: 568px) {
-      top: 20px;
+      top: 15px;
       left: 40px;
     }
 
@@ -85,9 +84,9 @@ export const InputContainer = styled.div`
       font-weight:600;
 
       // Xsmall devices (smartphones phones, 576px and down)
-      @media (max-width: 567px) { top: 25px; left: 40px; font-size: 10px;}
+      @media (max-width: 567px) { top: 15px; left: 40px; font-size: 10px;}
       // Small devices (landscape phones, (568px and up)
-      @media (min-width: 568px) { top: 25px; left: 45px; font-size: 10px;}
+      @media (min-width: 568px) { top: 20px; left: 45px; font-size: 10px;}
       // Medium devices (tablets, 768px and up)
       @media (min-width: 768px) { top: 30px; left: 30px; font-size: 11px; }
       // Large devices (desktops, 992px and up)

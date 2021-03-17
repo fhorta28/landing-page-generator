@@ -13,34 +13,34 @@ import * as modalForm from '../../variables/modalForm'
 
 const Modal = ({closeModal}) => {
     
-    let modalRef;
+  let modalRef;
 
-    const hideModal = (e) => {
-      if (modalRef && !modalRef.contains(e.target)) {
-         closeModal();
-      }
+  const hideModal = (e) => {
+    if (modalRef && !modalRef.contains(e.target)) {
+      closeModal();
     }
+  }
   
-    useEffect(() => {
-      document.addEventListener('click', hideModal)
-      return () => {
-        document.removeEventListener('click', hideModal);
-      }
-    },[]);
+  useEffect(() => {
+    document.addEventListener('click', hideModal)
+    return () => {
+      document.removeEventListener('click', hideModal);
+    }
+  },[]);
     
-    return (  
-        <ModalWrapper>
-            <StyleModal ref={(node) => modalRef = node}>
-                <HeaderModal>
-                    <TitleModal>{modalForm.bannerModal.text}</TitleModal>
-                    <BtnClose onClick={closeModal}>
-                        <FontAwesomeIcon icon={modalForm.modalCloseIcon.text}/>
-                    </BtnClose>
-                </HeaderModal>
-                <Form/>
-            </StyleModal>
-        </ModalWrapper>  
-    )
+  return (  
+    <ModalWrapper>
+      <StyleModal ref={(node) => modalRef = node}>
+        <HeaderModal>
+          <TitleModal>{modalForm.bannerModal.text}</TitleModal>
+          <BtnClose onClick={closeModal}>
+            <FontAwesomeIcon icon={modalForm.modalCloseIcon.text}/>
+          </BtnClose>
+        </HeaderModal>
+        <Form/>
+      </StyleModal>
+    </ModalWrapper>  
+  )
 }
 
 export default Modal
