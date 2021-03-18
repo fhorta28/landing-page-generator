@@ -4,21 +4,21 @@ import * as navbar from '../../variables/navbar'
 
 export const SectionContainer = styled.div`
   width:100%;
-  height:150vh;
+  height:160vh;
   padding: 20px 0 20px 0;
   border-top: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content:space-around;
   
   @media (max-width: 1024px) {
-    height:110vh;
+    height: 150vh;
+    padding: 10px 0 10px 0;
   } 
   @media (max-width: 768px) {
-  
-  }
-  @media (max-width: 560px) {
-  
+    height: 160vh;
+    padding: 10px 0 10px 0;
   }   
 `
 export const Title = styled.h2`
@@ -26,36 +26,21 @@ export const Title = styled.h2`
   font-weight: 700;
   text-align: center;
   margin: 10px 5px;
-  width:90%;
+  width: 90%;
 
   @media (max-width: 1024px) {
-     
+    font-size: 32px;
   } 
   @media (max-width: 768px) {
-    font-size: 32px;
+    font-size: 22px;
   }
   @media (max-width: 560px) {
-    font-size: 28px;
+    font-size: 18px;
   }    
 `
-export const SubTitle = styled.p`
-  margin: 0px;
-  font-size: 35px;
-  font-weight: 700;
-
-  @media (max-width: 1024px) {
-    font-size: 28px;
-  } 
-  @media (max-width: 768px) {
-    font-size: 18px;
-  }
-  @media (max-width: 560px) {
-    font-size: 28px;
-  } 
-`
 export const ServicesContainer = styled.div`
-  max-width: 90%;
-  max-height: 130vh;
+  width: 90%;
+  max-height: 150vh;
   display: grid;
   overflow: hidden;
   box-sizing: border-box;
@@ -64,34 +49,34 @@ export const ServicesContainer = styled.div`
   padding: 30px 10px 50px 10px;
 
   @media (max-width: 1024px) {
-   
-   
+    grid-gap: 35px;
+    width: 100%;
   } 
   @media (max-width: 768px) {
-    
-    display:block;
+    padding: 30px 8px 50px 8px; 
   }
   @media (max-width: 560px) {
-    font-size: ;
-  } 
-
+    grid-gap: 26px;
+    padding: 10px 5px;
+  }
 `
 export const ServicesBox = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 30vh;
+  height: 35vh;
   
   @media (max-width: 1024px) {
-    height: 20vh;
-    grid-gap:5px;
+    height: 35vh;
+    grid-gap: 5px;
   } 
   @media (max-width: 768px) {
-    height:20vh;
-    
+    height: 30vh; 
   }
   @media (max-width: 560px) {
-    font-size: ;
+    flex-direction: column-reverse;
+    text-align: center;
+    height: 40vh;
   } 
 `
 export const ServicesBox2 = styled.div`
@@ -101,15 +86,15 @@ export const ServicesBox2 = styled.div`
   align-items: center;
   height: 30vh;
   @media (max-width: 1024px) {
-    height: 20vh;
-    
+    height: 35vh; 
   } 
   @media (max-width: 768px) {
-    height:20vh;
-    
+    height: 30vh; 
   }
   @media (max-width: 560px) {
-    font-size: ;
+   flex-direction: column-reverse;
+   text-align: center;
+   height: 35vh;
   } 
 `
 export const ServicesDescription = styled.div`
@@ -124,13 +109,10 @@ export const ServicesDescription = styled.div`
   @media (max-width: 1024px) {
     width: 50%;
   }  
-  @media (max-width: 768px) {
-    display:inline-block;
-    width: 40%;
-    
-  }
   @media (max-width: 560px) {
-    font-size: ;
+    padding: 5px;
+    width: 95%;
+    height: 50%;
   } 
 `
 export const TitleDescription = styled.h3`
@@ -140,13 +122,13 @@ export const TitleDescription = styled.h3`
   width: 100%;
 
   @media (max-width: 1024px) {
-    font-size: 28px;
+    font-size: 22px;
   } 
   @media (max-width: 768px) {
     font-size: 18px;
   }
   @media (max-width: 560px) {
-    font-size: ;
+    font-size:16px ;
   } 
 `
 export const Description = styled.p`
@@ -154,11 +136,14 @@ export const Description = styled.p`
   font-size: 18px;
   width:100%;
 
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
   @media (max-width: 768px) {
     font-size: 14px;
   }
   @media (max-width: 560px) {
-    font-size: ;
+    margin-top: 10px;
   } 
 `
 export const ImgServices = styled.img`
@@ -175,11 +160,12 @@ export const ImgServices = styled.img`
   } 
   @media (max-width: 768px) {
     width: 200px;
-    height: 150px;
-     
+    height: 150px;   
   }
   @media (max-width: 560px) {
-    font-size: ;
+    width: 100px;
+    height: 80px;
+    margin-bottom: 20px;
   } 
 `
 export const BtnContainer = styled.button`
@@ -187,20 +173,16 @@ export const BtnContainer = styled.button`
   color: ${navbar.btn.textColor};
   border: none;
   border-radius: 5px;
-  color: ;
   cursor: pointer;
   font-size: 16px;
   padding: 8px 200px;
-  margin: 15px  0;
   &:focus { outline: none };
   &:hover { opacity: 0.9 };
 
   @media (max-width: 768px) {
-    
     padding: 8px 100px;
   }
   @media (max-width: 560px) {
-    font-size: ;
-  }   
+    padding: 6px 80px;
+  }     
 `
-
