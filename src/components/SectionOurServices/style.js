@@ -11,6 +11,7 @@ export const SectionContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content:space-around;
+  overflow:hidden;
   
   @media (max-width: 1024px) {
     height: 150vh;
