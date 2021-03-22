@@ -36,7 +36,7 @@ const TestimonialsSection = ({ slides }) => {
         </SlideBtnRight>      
         { slideData.map((slide, index) => {
           return(
-            <Slide key={index}>
+            <Slide key={index} active={index === current}>
               {index === current && (
                 <>
                   <SlideText>
