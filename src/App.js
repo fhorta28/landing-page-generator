@@ -7,6 +7,8 @@ import Modal from './components/Modal'
 import ReferencesSection from './components/ReferencesSection'
 import SectionServices from './components/SectionOurServices'
 import TestimonialsSection from './components/TestimonialsSection'
+import Footer from './components/Footer'
+
 import { slideData } from './components/TestimonialsSection/slideData'
 
 const App = () => {
@@ -25,6 +27,7 @@ const App = () => {
       <ReferencesSection/>
       <SectionServices/>
       <TestimonialsSection slides={slideData}/>
+      <Footer/>
     </>
   )
 }
