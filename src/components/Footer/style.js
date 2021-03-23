@@ -25,7 +25,6 @@ export const BannerFooter = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    
   }
 `
 export const TextBannerFooter = styled.p`
@@ -35,9 +34,6 @@ export const TextBannerFooter = styled.p`
   font-size: 48px;
   font-weight: 600;
 
-  @media (max-width: 1024px) {
-   
-  } 
   @media (max-width: 768px) {
     width: 50%;
     font-size: 32px;
