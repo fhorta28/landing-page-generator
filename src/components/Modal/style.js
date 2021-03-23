@@ -5,17 +5,17 @@ import * as modaleForm from'../../variables/modalForm'
 
 export const ModalWrapper = styled.div`
   display: flex;
-  z-index:1;
+  z-index: 1;
   justify-content: center;
   align-items: center;
-  position:fixed;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
   background-color: rgba(0,0,0, 0.3);
-  transform:scaleY(.01) scaleX(0);
-  animation:unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000)
+  transform: scaleY(.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.840, 0.440, 1.000)
   forwards;
 
   @keyframes unfoldIn {
@@ -35,9 +35,9 @@ export const StyleModal = styled.div`
   width: 50vw;
   height: 65vh;
   display: flex;
-  z-index:1;
-  flex-direction:column;
-  justify-content:space-around;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   background-color: ${modaleForm.modal.backgroundColor};
   color: ${modaleForm.modal.textColor};
@@ -57,7 +57,7 @@ export const StyleModal = styled.div`
     box-shadow: 0 0 5px rgb(0 0 0 / 50%);
   }
   @media (max-width: 560px) {
-    justify-content:center;
+    justify-content: center;
     padding: 20px;
     width: 100vw;
     height: 100vh;
@@ -74,7 +74,7 @@ export const HeaderModal = styled.div`
 
   @media (max-width: 1024px) {
     width: 80%;
-    text-align:center; 
+    text-align: center; 
   }
 `
 export const TitleModal = styled.h2`
@@ -82,7 +82,7 @@ export const TitleModal = styled.h2`
     
   @media (max-width: 1024px) {
     width: 100%;
-    text-align:center; 
+    text-align: center; 
   }
 `
 export const BtnClose = styled.div`

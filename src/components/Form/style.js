@@ -138,12 +138,12 @@ export const InputSelect = styled.select`
 export const ContainerBtn = styled.div`
   width : 90%;
   display: flex;
-  justify-content : flex-end;
+  justify-content: flex-end;
   align-items: center;
   margin : 0px 15px;
 
   @media (max-width: 768px) {
-    justify-content : center;
+    justify-content: center;
   }
 `
 

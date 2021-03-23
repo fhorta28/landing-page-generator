@@ -5,14 +5,21 @@ import * as navbar from '../../variables/navbar'
 
 export const Nav = styled.nav`
   width: 100%;
-  height:15vh;
+  box-sizing: border-box;
+  height: 15vh;
   background: ${navbar.navStyle.backgroundColor};
   display: flex;
-  margin : 0 auto;
-  padding : 0 auto;
+  margin: 0 auto;
+  padding: 0 auto;
   display: flex;
-  border-bottom : 1px solid;
+  border-bottom: 1px solid;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index:1;
+  @media (max-width: 768px){
+   
+  }
 `
 export const ContainerBrand = styled.div`
   display: flex;
@@ -30,13 +37,13 @@ export const Slogan = styled.div`
   display: flex;
   align-items: center;
   width : ${navbar.slogan.width};
-  color:${navbar.slogan.textColor} ;
+  color: ${navbar.slogan.textColor} ;
   
 `
 export const ContainerBtn = styled.div`
   width : 180px;
   display: flex;
-  justify-content : flex-end;
+  justify-content: flex-end;
   align-items: center;
   margin : 0 15px;
 
@@ -46,11 +53,11 @@ export const ContainerBtn = styled.div`
     transform: ${({ open }) => !open ? 'translateX(0)' : 'translateX(100%)'};
     z-index:1;
     align-items: center;
+    position: fixed;
     flex-direction: column;
     justify-content: center;
-    position: fixed;
-    height : 100vh;
-    width : 100vw;
+    height: 100vh;
+    width: 100vw;
     background-color:${navbar.navStyle.backgroundColor}; 
   }
 ` 
@@ -69,15 +76,14 @@ export const StyleBurger = styled.div`
   display: none;
   width: 35px;
   height: 33px;
-  margin: 18px;
-  align-items: end;
+  margin: 30px;
+  align-items: center;
   justify-content: center;
   background-color: ${({ open }) => open ? navbar.btn.backgroundColorOnclick : navbar.btn.backgroundColor}; 
   border-radius: 3px;
   
   @media (max-width: 768px){
     display: flex;
-    z-index: 1;
+    z-index:1;
   }
-  
 `

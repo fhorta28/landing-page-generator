@@ -5,6 +5,7 @@ import Banner from './components/Banner'
 import Navbar from './components/Navbar'
 import Modal from './components/Modal'
 import ReferencesSection from './components/ReferencesSection'
+import SectionServices from './components/SectionOurServices'
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         { showModal && <Modal closeModal={toogleModal} /> }
       <Banner openModal={toogleModal} />
       <ReferencesSection/>
+      <SectionServices/>
     </>
   )
 }
