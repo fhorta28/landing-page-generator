@@ -17,9 +17,6 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 99;
-  @media (max-width: 768px){
-   
-  }
 `
 export const ContainerBrand = styled.div`
   display: flex;
@@ -38,7 +35,6 @@ export const Slogan = styled.div`
   align-items: center;
   width : ${navbar.slogan.width};
   color: ${navbar.slogan.textColor} ;
-  
 `
 export const ContainerBtn = styled.div`
   width : 180px;
