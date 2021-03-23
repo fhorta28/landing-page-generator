@@ -7,6 +7,8 @@ import Modal from './components/Modal'
 import ReferencesSection from './components/ReferencesSection'
 import SectionServices from './components/SectionOurServices'
 import TestimonialsSection from './components/TestimonialsSection'
+import Footer from './components/Footer'
+
 import { slideData } from './components/TestimonialsSection/slideData'
 
 const App = () => {
@@ -23,8 +25,9 @@ const App = () => {
         { showModal && <Modal closeModal={toogleModal} /> }
       <Banner openModal={toogleModal} />
       <ReferencesSection/>
-      <SectionServices/>
+      <SectionServices openModal={toogleModal}/>
       <TestimonialsSection slides={slideData}/>
+      <Footer openModal={toogleModal}/>
     </>
   )
 }

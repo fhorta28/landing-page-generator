@@ -210,7 +210,7 @@ export const SlideBtnRight = styled.div`
   align-items: center;
   top: 45%;
   right: 2px;
-  z-index: 99;
+  z-index: 1;
   width: 60px;
   height: 60px;
   border-radius: 50px;
@@ -231,7 +231,7 @@ export const SlideBtnLeft = styled.div`
   align-items: center;
   top: 45%;
   left: 2px;
-  z-index: 99;
+  z-index: 1;
   width: 60px;
   height: 60px;
   border-radius: 50px;
