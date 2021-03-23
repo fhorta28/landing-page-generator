@@ -32,7 +32,6 @@ const Footer = ({ openModal }) => {
           Terms
         </Link>
       </LinkFooterContainer>
-
     </Container>
    )
 }
