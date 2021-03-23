@@ -11,7 +11,7 @@ import image2 from '../../variables/assets/requirement.svg'
 import image3 from '../../variables/assets/product-release.svg'
 
 
-const SectionServices = () => {
+const SectionServices = ({openModal}) => {
 
   //Aos initialize
   useEffect(() =>{
@@ -44,7 +44,7 @@ const SectionServices = () => {
           <ImgServices data-aos="fade-left" data-aos-delay="900" src={image3}/>
         </ServicesBox>
       </ServicesContainer>
-      <BtnContainer>
+      <BtnContainer onClick={openModal}>
         Demandez votre démo
       </BtnContainer>
     </SectionContainer>

@@ -25,9 +25,9 @@ const App = () => {
         { showModal && <Modal closeModal={toogleModal} /> }
       <Banner openModal={toogleModal} />
       <ReferencesSection/>
-      <SectionServices/>
+      <SectionServices openModal={toogleModal}/>
       <TestimonialsSection slides={slideData}/>
-      <Footer/>
+      <Footer openModal={toogleModal}/>
     </>
   )
 }
