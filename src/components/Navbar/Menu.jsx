@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-//Library
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 //Intern
-import { StyleBurger, ContainerBtn, NavBtn } from './style';
+import Icon from '../Icon'
+import Button from '../Button'
+import { StyleBurger, ContainerMenu, ItemsMenu } from './style';
+
 //Variables
 import * as navbar from '../../variables/navbar';
+import * as banner from '../../variables/banner'
 
 const Menu = ({openModal}) => {
 
@@ -12,11 +15,18 @@ const Menu = ({openModal}) => {
 
   return (
     <>
-      <ContainerBtn  open= { open } >
-        <NavBtn onClick= {openModal}>{navbar.btn.content}</NavBtn> 
-      </ContainerBtn>
+      <ContainerMenu  open= {open} >
+        <ItemsMenu onClick= {openModal}>
+          <Button
+            backgroundColor={navbar.btn.backgroundColor}
+            textColor={navbar.btn.textColor}
+            content={banner.cta.content}
+            onClick={openModal}
+          />
+        </ItemsMenu> 
+      </ContainerMenu>
       <StyleBurger open= {open} onClick={()=> setOpen(!open)}>
-        <FontAwesomeIcon icon={open ? navbar.burgerIcon.text :'times'} size="2x"/>
+        <Icon icon={open ? navbar.burgerIcon.text :'times'} size="2x"/>
       </StyleBurger>
     </> 
   )

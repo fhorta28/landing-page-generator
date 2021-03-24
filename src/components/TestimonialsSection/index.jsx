@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
+
 //Intern
 import { SectionContainer, Title, TitleSub, SliderContainer, Slide, SlideText, TestimonialsAuthor, TestimonialsImg, TestimonialsLogo, TestimonialsText, SlideBtnLeft, SlideBtnRight } from './style'
+import Icon from '../Icon'
 
-//Library
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { slideData } from './slideData'
-
 
 const TestimonialsSection = ({ slides }) => {
   
@@ -29,10 +28,10 @@ const TestimonialsSection = ({ slides }) => {
       <TitleSub>They trusted us</TitleSub>
       <SliderContainer>
         <SlideBtnLeft onClick = {prevSlide}>
-          <FontAwesomeIcon icon='angle-left' size="2x"/>
+          <Icon icon='angle-left' size="2x"/>
         </SlideBtnLeft>
         <SlideBtnRight onClick = {nextSlide}>
-          <FontAwesomeIcon icon='angle-right' size="2x"/>
+          <Icon icon='angle-right' size="2x"/>
         </SlideBtnRight>      
         { slideData.map((slide, index) => {
           return(
