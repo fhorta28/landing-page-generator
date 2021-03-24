@@ -44,6 +44,7 @@ export const StyleModal = styled.div`
   border-radius: 10px;
   box-shadow: 0 0 15px rgb(0 0 0 / 50%);
   padding : 20px;
+  margin-top: 60px;
   overflow:hidden;
 
   @media (max-width: 1024px) {

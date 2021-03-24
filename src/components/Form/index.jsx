@@ -1,22 +1,64 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 //Intern
 import Input from './Input'
-import UseForm from "./UseForm";
-import validate from "./validateForm";
 import { FormContainer, FormBtn, ContainerBtn } from './style'
 
-const Form = () => {
+const Form = (callback) => {
 
-  const { handleChange, handleSubmit, values, error, isSubmitting } = UseForm(
-    submit,
-    validate
-  );
+  const [values, setValues] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: '',
+    companyName: '',
+    contactPreference: '', 
+  })
+  const [error, setError] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  function submit() {
-    // Test submit
-    console.log(values);
+  const handleChange = e => {
+    const { name, value } = e.target;
+    setValues({ ...values,[name]: value });
+    setError(validateInfo(values));
   }
+
+  const validateInfo = (value) => {
+    let error = {};
+    if (!value.firstName ) {
+      error.firstName = 'Prénom obligatoire';
+    }
+    if (!value.lastName) {
+      error.lastName = 'Nom obligatoire';
+    }
+    if (!value.companyName) {
+      error.companyName = 'Nom entreprise obligatoire';
+    }
+    if (!value.phoneNumber) {
+      error.phoneNumber = 'Téléphone obligatoire';
+    }
+    if (!value.email) {
+      error.email = 'Email obligatoire';
+    } else if (!/\S+@\S+\.\S+/.test(value.email)) {
+      error.email = 'Email invalide!';
+    }
+    return error;
+  }
+  
+  const handleSubmit = e => {
+    e.preventDefault();
+    setError(validateInfo(values));
+    setIsSubmitting(true);
+  }
+
+  useEffect(
+    () => {
+      if (Object.keys(error).length === 0 && isSubmitting ) {
+        callback();
+      }
+    },
+    []
+  );
  
   return (
     <>
