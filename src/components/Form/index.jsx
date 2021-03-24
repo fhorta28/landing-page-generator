@@ -23,6 +23,12 @@ const Form = (callback) => {
     setError(validateInfo(values));
   }
 
+  const handleSubmit = e => {
+    e.preventDefault();
+    setError(validateInfo(values));
+    setIsSubmitting(true);
+  }
+  
   const validateInfo = (value) => {
     let error = {};
     if (!value.firstName ) {
@@ -45,12 +51,6 @@ const Form = (callback) => {
     return error;
   }
   
-  const handleSubmit = e => {
-    e.preventDefault();
-    setError(validateInfo(values));
-    setIsSubmitting(true);
-  }
-
   useEffect(
     () => {
       if (Object.keys(error).length === 0 && isSubmitting ) {
