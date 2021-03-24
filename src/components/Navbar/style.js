@@ -44,6 +44,7 @@ export const ContainerMenu = styled.ul`
   margin : 0 15px;
 
   @media (max-width: 768px){
+    margin:0;
     padding: 0;
     flex-flow: column nowrap;
     transform: ${({ open }) => !open ? 'translateX(0)' : 'translateX(100%)'};
@@ -72,7 +73,6 @@ export const StyleBurger = styled.div`
   margin: 30px;
   align-items: center;
   justify-content: center;
-  background-color: rgb(56, 9, 124, 0.2);
   border-radius: 3px;
   
   @media (max-width: 768px){
