@@ -17,12 +17,12 @@ const Menu = ({openModal}) => {
     <>
       <ContainerMenu  open= {open} >
         <ItemsMenu onClick= {openModal}>
-        <Button
-          backgroundColor={navbar.btn.backgroundColor}
-          textColor={navbar.btn.textColor}
-          content={banner.cta.content}
-          onClick={openModal}
-        />
+          <Button
+            backgroundColor={navbar.btn.backgroundColor}
+            textColor={navbar.btn.textColor}
+            content={banner.cta.content}
+            onClick={openModal}
+          />
         </ItemsMenu> 
       </ContainerMenu>
       <StyleBurger open= {open} onClick={()=> setOpen(!open)}>
