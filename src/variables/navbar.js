@@ -1,5 +1,4 @@
 
-
 export const navStyle = {
   navbarHeight : '55px',
   backgroundColor :'rgb(66, 63, 121)',
