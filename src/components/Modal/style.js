@@ -5,7 +5,7 @@ import * as modaleForm from'../../variables/modalForm'
 
 export const ModalWrapper = styled.div`
   display: flex;
-  z-index: 1;
+  z-index: 5;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -33,9 +33,9 @@ export const ModalWrapper = styled.div`
 
 export const StyleModal = styled.div`
   width: 50vw;
-  height: 65vh;
+  height: 80vh;
   display: flex;
-  z-index: 1;
+  z-index: 99;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -44,30 +44,29 @@ export const StyleModal = styled.div`
   border-radius: 10px;
   box-shadow: 0 0 15px rgb(0 0 0 / 50%);
   padding : 20px;
-  margin-top: 60px;
   overflow:hidden;
 
   @media (max-width: 1024px) {
     width: 60vw;
-    height: 70vh;
+    height: 60vh;
   }
   @media (max-width: 768px) {
     padding: 20px;
     width: 80vw;
-    height: 70vh;
+    height: 60vh;
     box-shadow: 0 0 5px rgb(0 0 0 / 50%);
   }
   @media (max-width: 560px) {
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
     width: 100vw;
-    height: 100vh;
+    height:100%;
     box-shadow: 0 0 5px rgb(0 0 0 / 50%);
   }
 `
 export const HeaderModal = styled.div`
   width: 100%;
-  height: 50px;
+  height: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,4 +87,10 @@ export const TitleModal = styled.h2`
 `
 export const BtnClose = styled.div`
   cursor: pointer;
+`
+export const ContainerForm = styled.div`
+  diplay: flex;
+  align-items: center;
+  width: 90%;
+  height:70%;
 `

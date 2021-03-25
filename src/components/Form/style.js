@@ -30,6 +30,7 @@ export const InputContainer = styled.div`
   transition: all 0.2s ease;
 
   @media (max-width: 768px) {
+    justify-content:center;
     padding-top: 10px; 
   }
   @media (max-width: 560px) {
@@ -50,12 +51,12 @@ export const InputContainer = styled.div`
       left: 40px;
     } 
     @media (max-width: 768px) {
-      top: 20px;
+      top: 35px;
       left: 50px;
       font-size: 16px;
     }
     @media (max-width: 568px) {
-      top: 15px;
+      top: 25px;
       left: 40px;
     }
 
@@ -84,11 +85,11 @@ export const InputContainer = styled.div`
       font-weight:600;
 
       // Xsmall devices (smartphones phones, 576px and down)
-      @media (max-width: 567px) { top: 15px; left: 40px; font-size: 10px;}
+      @media (max-width: 567px) { top: 30px; left: 40px; font-size: 10px;}
       // Small devices (landscape phones, (568px and up)
-      @media (min-width: 568px) { top: 20px; left: 45px; font-size: 10px;}
+      @media (min-width: 568px) { top: 30px; left: 45px; font-size: 10px;}
       // Medium devices (tablets, 768px and up)
-      @media (min-width: 768px) { top: 30px; left: 30px; font-size: 11px; }
+      @media (min-width: 768px) { top: 40px; left: 40px; font-size: 11px; }
       // Large devices (desktops, 992px and up)
       @media (min-width: 992px) { top: 33px; left: 40px; font-size: 13px; }
     `} 
@@ -136,12 +137,11 @@ export const InputSelect = styled.select`
 `
 
 export const ContainerBtn = styled.div`
-  width : 90%;
+  width : 95%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin : 0px 15px;
-
+  
   @media (max-width: 768px) {
     justify-content: center;
   }
@@ -154,15 +154,15 @@ export const FormBtn = styled.button`
   color: ${navbar.btn.textColor};
   cursor: pointer;
   font-size: 15px;
-  margin: 10px ;
-  padding: 10px 25px;
+  padding: 12px 30px;
   &:focus { outline: none };
   &:hover { opacity: 0.9 };
 
   @media (max-width: 1024px) {
-    padding: 10px 20px;
+    padding: 12px 30px;
   } 
-  @media (max-width: 768px) {
-    padding: 8px 15px;
-  }
+  @media (max-width: 786px) {
+    padding: 12px 30px;
+    margin: 0px;
+  } 
 `

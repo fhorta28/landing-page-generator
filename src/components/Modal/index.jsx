@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 //Intern
 import Form from '../Form'
-import { ModalWrapper, StyleModal, HeaderModal, BtnClose, TitleModal } from './style';
+import { ModalWrapper, StyleModal, HeaderModal, BtnClose, TitleModal, ContainerForm } from './style';
 
 //Variables
 import * as modalForm from '../../variables/modalForm'
@@ -37,7 +37,9 @@ const Modal = ({closeModal}) => {
             <FontAwesomeIcon icon={modalForm.modalCloseIcon.text}/>
           </BtnClose>
         </HeaderModal>
-        <Form/>
+        <ContainerForm>
+          <Form/>
+        </ContainerForm>  
       </StyleModal>
     </ModalWrapper>  
   )
