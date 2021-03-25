@@ -7,7 +7,7 @@ import {
 
 // Components
 import Privacy from './components/Pages/Privacy.jsx'
-import Terms from '.components/Pages/Terms.jsx'
+import Terms from './components/Pages/Terms.jsx'
 import Banner from './components/Banner'
 import Navbar from './components/Navbar'
 import Modal from './components/Modal'
@@ -28,22 +28,21 @@ const App = () => {
 
   return (
     <Router>
-      <Navbar openModal={toogleModal} />
-        { showModal && <Modal closeModal={toogleModal} /> }
-      <Banner openModal={toogleModal} />
-      <ReferencesSection/>
-      <SectionServices openModal={toogleModal}/>
-      <TestimonialsSection slides={slideData}/>
-      <Footer openModal={toogleModal}/>
+      { showModal && <Modal closeModal={toogleModal} /> }   
       <Switch>
         <Route path="/privacy">
-          <Privacy />
+          <Privacy openModal={toogleModal}/>
         </Route>
         <Route path="/terms">
-          <Terms />
+          <Terms openModal={toogleModal}/>
         </Route>
         <Route path="/">
-          <Home />
+          <Navbar openModal={toogleModal} />
+          <Banner openModal={toogleModal} />
+          <ReferencesSection/>
+          <SectionServices openModal={toogleModal}/>
+          <TestimonialsSection slides={slideData}/>
+          <Footer openModal={toogleModal}/>          
         </Route>
       </Switch>
     </Router>

@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from "react-router-dom"
 // Intern
 import Button from '../Button'
-import { Container, BannerFooter, TextBannerFooter, BtnContainer, LinkFooterContainer, FooterCopyR } from './style'
+import { Container, BannerFooter, TextBannerFooter, BtnContainer, LinkFooterContainer, LinkFooter, FooterCopyR } from './style'
 //Variables
 import * as banner from '../../variables/banner'
 
@@ -27,13 +27,13 @@ const Footer = ({ openModal }) => {
       <LinkFooterContainer>
         <FooterCopyR>© 2021 Landing-page-generator. All rights reserved.</FooterCopyR>
         <Link to="/privacy">
-          Privacy  
+        <LinkFooter href="/privacy">Privacy</LinkFooter>
         </Link>
         <Link to="/terms">
           <LinkFooter href="/terms">Terms</LinkFooter>
         </Link>
         <Link to="/">
-          Home  
+        <LinkFooter>Home</LinkFooter>
         </Link>
       </LinkFooterContainer>
     </Container>

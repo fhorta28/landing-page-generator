@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from "react-router-dom"
 //Intern
 import Menu from './Menu'
 import { Nav,  ContainerBrand, Logo, Slogan } from './style'
@@ -13,7 +13,9 @@ const Navbar = ({openModal}) => {
   return (
     <Nav>
       <ContainerBrand >
-        <Logo src={LogoImg} alt="logo"/>
+        <Link to="/">
+          <Logo src={LogoImg} alt="logo"/>
+        </Link>
         <Slogan>{navbar.slogan.text}</Slogan>
       </ContainerBrand> 
       <Menu openModal={openModal}/>
