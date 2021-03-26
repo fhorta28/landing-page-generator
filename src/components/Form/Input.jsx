@@ -4,6 +4,7 @@ import React, { useState }from 'react'
 import { InputContainer, InputText, InputSelect } from './style'
 
 const Input = ({
+  isSubmitting,
   error,
   value,
   type,
@@ -34,10 +35,8 @@ const Input = ({
       if (error) {
         return <label>{ error }</label>
       }
-
       return <label>{ label }</label>      
     }
-    return null
   }
   
   const isFocused = focused || String(value).length || type === "select"
@@ -61,7 +60,7 @@ const Input = ({
     }else {
       return (
         <InputText
-          error={error}
+          error={error && isSubmitting}
           value={value}
           type={type}
           onChange={onChange}

@@ -16,7 +16,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 4;
 `
 export const ContainerBrand = styled.div`
   display: flex;
@@ -50,6 +50,7 @@ export const ContainerMenu = styled.ul`
     transform: ${({ open }) => !open ? 'translateX(0)' : 'translateX(100%)'};
     z-index:1;
     align-items: center;
+    top:0;
     position: fixed;
     flex-direction: column;
     justify-content: center;
