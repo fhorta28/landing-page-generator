@@ -67,7 +67,7 @@ export const LinkFooterContainer = styled.div`
     height: 15vh;
   } 
 `
-export const Link = styled.a`
+export const LinkFooter = styled.a`
   border-left: 1px solid grey;
   padding:  0px 10px;
   color: ${banner.subTitle.color};

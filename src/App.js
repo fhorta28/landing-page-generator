@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom"
 
 // Components
+import Privacy from './components/Pages/Privacy.jsx'
+import Terms from './components/Pages/Terms.jsx'
 import Banner from './components/Banner'
 import Navbar from './components/Navbar'
 import Modal from './components/Modal'
@@ -20,15 +27,25 @@ const App = () => {
   }
 
   return (
-    <>
-      <Navbar openModal={toogleModal} />
-        { showModal && <Modal closeModal={toogleModal} /> }
-      <Banner openModal={toogleModal} />
-      <ReferencesSection/>
-      <SectionServices openModal={toogleModal}/>
-      <TestimonialsSection slides={slideData}/>
-      <Footer openModal={toogleModal}/>
-    </>
+    <Router>
+      { showModal && <Modal closeModal={toogleModal} /> }   
+      <Switch>
+        <Route path="/privacy">
+          <Privacy openModal={toogleModal}/>
+        </Route>
+        <Route path="/terms">
+          <Terms openModal={toogleModal}/>
+        </Route>
+        <Route path="/">
+          <Navbar openModal={toogleModal} />
+          <Banner openModal={toogleModal} />
+          <ReferencesSection/>
+          <SectionServices openModal={toogleModal}/>
+          <TestimonialsSection slides={slideData}/>
+          <Footer openModal={toogleModal}/>          
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 
