@@ -27,21 +27,21 @@ const SectionServices = ({openModal}) => {
             <TitleDescription>Lorem ipsum dolor sit amet.</TitleDescription>
             <Description>Quisque id ornare urna. Vestibulum accumsan tortor et ipsum dapibus, ac malesuada sapien volutpat. Curabitur rutrum mollis urna. Nam tincidunt tellus sit amet erat pretium, non imperdiet turpis mattis. Proin vel justo libero. Ut non malesuada felis. Nullam non odio.</Description> 
           </ServicesDescription>
-          <ImgServices data-aos="fade-left" data-aos-delay="900" src={image}/>
+          <ImgServices data-aos="zoom-out-left" data-aos-duration="1500" src={image}/>
         </ServicesBox>
         <ServicesBox2>
           <ServicesDescription>
             <TitleDescription>Lorem ipsum dolor sit amet.</TitleDescription>
             <Description>Quisque id ornare urna. Vestibulum accumsan tortor et ipsum dapibus, ac malesuada sapien volutpat. Curabitur rutrum mollis urna. Nam tincidunt tellus sit amet erat pretium, non imperdiet turpis mattis. Proin vel justo libero. Ut non malesuada felis. Nullam non odio.</Description> 
           </ServicesDescription>
-          <ImgServices data-aos="fade-right" data-aos-delay="900" src={image2}/>
+          <ImgServices data-aos="zoom-out-right" data-aos-duration="1500" src={image2}/>
         </ServicesBox2>
         <ServicesBox>
           <ServicesDescription>
             <TitleDescription>Lorem ipsum dolor sit amet.</TitleDescription>
             <Description>Quisque id ornare urna. Vestibulum accumsan tortor et ipsum dapibus, ac malesuada sapien volutpat. Curabitur rutrum mollis urna. Nam tincidunt tellus sit amet erat pretium, non imperdiet turpis mattis. Proin vel justo libero. Ut non malesuada felis. Nullam non odio.</Description> 
           </ServicesDescription>
-          <ImgServices data-aos="fade-left" data-aos-delay="900" src={image3}/>
+          <ImgServices data-aos="zoom-out-left" data-aos-duration="1500" src={image3}/>
         </ServicesBox>
       </ServicesContainer>
       <BtnContainer onClick={openModal}>
