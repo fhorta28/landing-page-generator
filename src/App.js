@@ -41,7 +41,7 @@ const ContainerModalSideB = styled.div`
   width: 65vw;
   height:200vh;
   Z-index:6;
-    @media (max-width: 1024px) {
+  @media (max-width: 1024px) {
     font-size: 18px;
   }
   @media (max-width: 768px) {
@@ -50,9 +50,7 @@ const ContainerModalSideB = styled.div`
   @media (max-width: 560px) {
     margin-top: 10px;
   } 
-
 `
-
 const App = () => {
 
   // Props & States
@@ -90,47 +88,45 @@ const App = () => {
   return (
     themeLoaded && <ThemeProvider theme={ selectedTheme }>
     <GlobalStyles/>
-    <Container newTheme={ newTheme }>
-    <Router>
-      { showModal && <Modal closeModal={toogleModal} /> } 
-     
+      <Container newTheme={ newTheme }>
+        <Router>
+          { showModal && <Modal closeModal={toogleModal} /> } 
           { showDialog && 
-          <ContainerModalSideB>
-          <ModalSidebar
-            header="Create a Theme"
-            body={ 
-            <>
-            <CreateThemeContent create={ createTheme }/>
-            <ThemeSelector setter={ setSelectedTheme } newTheme={ newTheme }/>
-            </>
-            }
-            open={ showDialog } 
-            callback = {manageDialog}  
-          >
-           
-          </ModalSidebar>   
-      </ContainerModalSideB>}
-      <Switch>
-        <Route path="/privacy">
-          <Privacy openModal={toogleModal}/>
-        </Route>
-        <Route path="/terms">
-          <Terms openModal={toogleModal}/>
-        </Route>
-        <Route path="/">
-        <ContainerPage newTheme={ newTheme }>
-          <Navbar className="navBar" openModal={toogleModal} />
-          <SideBarBtn onClick ={manageDialog}/>   
-          <Banner className="banner" openModal={toogleModal} />
-          <ReferencesSection/>
-          <SectionServices openModal={toogleModal}/>
-          <TestimonialsSection slides={slideData}/>
-          <Footer openModal={toogleModal}/>  
-          </ContainerPage>        
-        </Route>
-      </Switch>
-    </Router>
-    </Container>
+            <ContainerModalSideB>
+              <ModalSidebar
+                header="Create a Theme"
+                body={ 
+                  <>
+                   <CreateThemeContent create={ createTheme }/>
+                   <ThemeSelector setter={ setSelectedTheme } newTheme={ newTheme }/>
+                  </>
+                }
+                open={ showDialog } 
+                callback = {manageDialog}  
+              />  
+            </ContainerModalSideB>
+          }
+          <Switch>
+            <Route path="/privacy">
+              <Privacy openModal={toogleModal}/>
+            </Route>
+            <Route path="/terms">
+              <Terms openModal={toogleModal}/>
+            </Route>
+            <Route path="/">
+            <ContainerPage newTheme={ newTheme }>
+              <Navbar className="navBar" openModal={toogleModal} />
+              <SideBarBtn onClick ={manageDialog}/>   
+              <Banner className="banner" openModal={toogleModal} />
+              <ReferencesSection/>
+              <SectionServices openModal={toogleModal}/>
+              <TestimonialsSection slides={slideData}/>
+              <Footer openModal={toogleModal}/>  
+              </ContainerPage>        
+            </Route>
+          </Switch>
+        </Router>
+      </Container>
     </ThemeProvider>
   )
 }

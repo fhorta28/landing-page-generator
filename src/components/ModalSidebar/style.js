@@ -22,7 +22,7 @@ export const Modal = styled.div`
     width:100%;
     font-size: 14px;
   }
-`;
+`
 
 export const ModalContent = styled.div`
   position:relative;
@@ -34,31 +34,30 @@ export const ModalContent = styled.div`
   padding: 0;
   width:100%;
   height:100%;
-`;
+`
 
 export const ModalHeader = styled.div`
     display:flex;
     width:100%;
     background-color: ${({ theme }) => theme.colors.body};
     color: ${({ theme }) => theme.colors.secondary.colorText};
-`;
+`
 export const Title = styled.h2`
     display: flex;
     justify-content: center;
     padding-left: 20px;
     width: 90%;
-`;
+`
  export const IconClose = styled.div`
     display:flex;
     justify-content: center;
     padding: 8px;
     width: 10%;
-`;
+`
 
 export const ModalBody = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;   
-    
-`;
+    align-items:center;    
+`
