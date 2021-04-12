@@ -7,18 +7,18 @@ import { Container } from './style'
 
 const Button = props => {
   // Props & States
-  const { backgroundColor, textColor, content, onClick } = props
+  const { className, content, onClick, style } = props
   
   return (
-      <Container backgroundColor={backgroundColor} textColor={textColor} onClick= {onClick}>
+      <Container className={className} onClick= {onClick} style={style}>
         {content}
       </Container>   
   )
 }
 
 Button.propTypes = {
-  backgroundColor: PropTypes.string,
-  textColor: PropTypes.string,
+  style: PropTypes.string,
+  className: PropTypes.string,
   content: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 }

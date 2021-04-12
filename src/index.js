@@ -5,11 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import './services/FontAwesomeIco';
+import * as themes from './themeUtils/schema.json';
+import { setToLS } from './storage';
 
+
+const Index = () => {
+  console.log(themes.default);
+  setToLS('all-themes', themes.default);
+
+  return(
+    <App />
+  )
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Index />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -9,7 +9,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${banner.background};
+ 
 
   @media (max-width: 768px) {
     width: 100%;
@@ -70,7 +70,7 @@ export const LinkFooterContainer = styled.div`
 export const LinkFooter = styled.a`
   border-left: 1px solid grey;
   padding:  0px 10px;
-  color: ${banner.subTitle.color};
+  
 
   @media (max-width: 768px) {
     width: 30px;

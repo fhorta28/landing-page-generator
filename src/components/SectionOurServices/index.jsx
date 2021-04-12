@@ -44,7 +44,7 @@ const SectionServices = ({openModal}) => {
           <ImgServices data-aos="zoom-out-left" data-aos-duration="1500" src={image3}/>
         </ServicesBox>
       </ServicesContainer>
-      <BtnContainer onClick={openModal}>
+      <BtnContainer className="btnPrimary" onClick={openModal}>
         Demandez votre démo
       </BtnContainer>
     </SectionContainer>

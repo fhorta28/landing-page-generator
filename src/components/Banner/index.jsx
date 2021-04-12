@@ -14,13 +14,12 @@ import BannerImg from '../../variables/assets/banner_img.svg'
 const Banner = ({openModal}) => {
 
   return (
-    <Container>
+    <Container className="banner">
       <LeftContainer>
-        <Title>{banner.title.text}</Title> 
-        <SubTitle>{banner.subTitle.text}</SubTitle> 
+        <Title className="title">{banner.title.text}</Title> 
+        <SubTitle className ="textSubtitle">{banner.subTitle.text}</SubTitle> 
         <Button
-          backgroundColor={banner.cta.backgroundColor}
-          textColor={banner.cta.textColor}
+          className="btnSecondary"
           content={banner.cta.content}
           onClick={openModal}
         />

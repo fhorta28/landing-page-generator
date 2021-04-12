@@ -10,13 +10,12 @@ import * as banner from '../../variables/banner'
 const Footer = ({ openModal }) => {
 
   return (
-    <Container>
-      <BannerFooter>
-          <TextBannerFooter>Ready to get started?</TextBannerFooter>
+    <Container className="footerBanner">
+      <BannerFooter >
+          <TextBannerFooter className="textSubtitle">Ready to get started?</TextBannerFooter>
           <BtnContainer>  
             <Button 
-              backgroundColor={banner.cta.backgroundColor}
-              textColor={banner.cta.textColor}
+              className="btnSecondary"
               content={banner.cta.content}
               onClick={openModal}
               >
@@ -27,7 +26,7 @@ const Footer = ({ openModal }) => {
       <LinkFooterContainer>
         <FooterCopyR>© 2021 Landing-page-generator. All rights reserved.</FooterCopyR>
         <Link to="/privacy">
-        <LinkFooter href="/privacy">Privacy</LinkFooter>
+        <LinkFooter className="footerLink" href="/privacy">Privacy</LinkFooter>
         </Link>
         <Link to="/terms">
           <LinkFooter href="/terms">Terms</LinkFooter>

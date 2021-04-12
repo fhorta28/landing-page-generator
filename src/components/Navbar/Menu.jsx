@@ -18,8 +18,7 @@ const Menu = ({openModal}) => {
       <ContainerMenu  open= {open} >
         <ItemsMenu onClick= {openModal}>
           <Button
-            backgroundColor={navbar.btn.backgroundColor}
-            textColor={navbar.btn.textColor}
+            className="btnPrimary"
             content={banner.cta.content}
             onClick={openModal}
           />
