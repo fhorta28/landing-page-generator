@@ -5,7 +5,6 @@ import * as navbar from '../../variables/navbar'
 export const Container = styled.div`
   height: 85vh;
   width:100%;
-  background: ${banner.background};
   display:flex;
   box-sizing: border-box;
   align-items:center;
@@ -52,7 +51,6 @@ export const RightContainer = styled.div`
   }
 `
 export const SubTitle = styled.p`
-  color: ${banner.subTitle.color};
   font-size: 24px;
   font-weight: 400;
   margin: 10px 0 30px 0;

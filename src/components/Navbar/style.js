@@ -7,7 +7,6 @@ export const Nav = styled.nav`
   width: 100%;
   box-sizing: border-box;
   height: 15vh;
-  background: ${navbar.navStyle.backgroundColor};
   display: flex;
   margin: 0 auto;
   padding: 0 auto;
@@ -34,7 +33,6 @@ export const Slogan = styled.div`
   display: flex;
   align-items: center;
   width : ${navbar.slogan.width};
-  color: ${navbar.slogan.textColor} ;
 `
 export const ContainerMenu = styled.ul`
   width : 60%;
@@ -55,8 +53,7 @@ export const ContainerMenu = styled.ul`
     flex-direction: column;
     justify-content: center;
     height: 100vh;
-    width: 100vw;
-    background-color:${navbar.navStyle.backgroundColor}; 
+    width: 100vw; 
   }
 ` 
 export const ItemsMenu = styled.li`

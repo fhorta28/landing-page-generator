@@ -1,0 +1,67 @@
+{
+  "data" : {
+    "default1" : {
+      "id": "T_001",
+      "name": "Thème",
+      "colors": {
+          "primary": {
+              "background": "rgb(255, 255, 255)",
+              "color": "black",
+              "backgroundBtn": "rgb(70, 165, 159)",
+              "txtColorBtnP": "rgb(255, 255, 255)"
+            },
+          "secondary":{
+              "background": "rgb(66, 63, 121)",
+              "color": "rgb(255, 255, 255)",
+              "colorSubtitle": "rgba(255, 255, 255, 0.7)",
+              "textColorBtnS": "black"
+            },
+          "form": {
+              "label": "rgba(255, 255, 255, 0.7)",
+              "errorLabel": "red"
+            }  
+        },
+      "icon": {
+          "color": "rgb(255, 255, 255)"
+        },
+      "link": {
+          "color": "rgba(255, 255, 255, 0.7)",
+          "opacity": 1
+        },
+      "fontTitle": "Crimson Text",
+      "font": "Asap",
+      "imageBanner":"./variables/assets/banner_img.svg",
+      "titleBanner":"Titre de la bannière",
+      "subTitleBanner":"Sous titre de la bannière avec du texte..."
+    },  
+    "default2" : {
+        "id": "T_002",
+        "name": "Thème2",
+        "colors": {
+          "primary": {
+              "background": "rgb(255, 255, 255)",
+              "color": "#000000",
+              "backgroundBtn": "rgb(70, 165, 159)"
+          },
+          "secondary":{
+              "background": "rgb(66, 63, 121)",
+              "color": "rgb(255, 255, 255)",
+              "colorSubtitle": "rgba(255, 255, 255, 0.7)"
+          },
+          "form": {
+              "label": "rgba(255, 255, 255, 0.7)",
+              "errorLabel": "red"
+          }  
+        },
+        "icon": {
+          "color": "rgb(255, 255, 255)"
+        },
+        "link": {
+          "color": "rgb(255, 255, 255)",
+          "opacity": 1
+        },
+        "fontTitle": "Roboto",
+        "font": "Ubuntu"
+    }
+  }
+}
