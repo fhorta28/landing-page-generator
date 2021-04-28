@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from "axios";
+// import axios from "axios";
 import styled, { ThemeProvider } from "styled-components"
 import WebFont from 'webfontloader'
 import { GlobalStyles } from './themeUtils/GlobalStyle'
@@ -68,15 +68,15 @@ const App = () => {
       }
     });
   });
-  useEffect(() => {
-    async function fetchData(){
-          const request = await axios.get('http://localhost/serveur_landing_page_generator/front/user/2');   
-          setThemeUser(Object.values(request.data))
-          return request;
-   }
-   fetchData();
-  }, []);
- console.log(themeUser)
+//   useEffect(() => {
+//     async function fetchData(){
+//           const request = await axios.get('http://localhost/serveur_landing_page_generator/front/user/2');   
+//           setThemeUser(Object.values(request.data))
+//           return request;
+//    }
+//    fetchData();
+//   }, []);
+//  console.log(themeUser)
   // useEffect(() => {
   //   axios.get('http://localhost/serveur_landing_page_generator/front/users').then(resp => {console.log(resp.data)})
   //  }, []);
