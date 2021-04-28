@@ -5,8 +5,6 @@ import { useTheme } from '../../themeUtils/useTheme'
 import { getFromLS } from '../../storage'
 import { Wrapper, ThemedButton, HeaderPreview, ContainerTheme } from './style'
 
-
-
 export default (props) => {
   const themesFromStore = getFromLS('all-themes')
   const [data, setData] = useState(themesFromStore.data)
