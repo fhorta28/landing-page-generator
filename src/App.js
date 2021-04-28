@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import axios from "axios";
 import styled, { ThemeProvider } from "styled-components"
 import WebFont from 'webfontloader'
 import { GlobalStyles } from './themeUtils/GlobalStyle'
@@ -28,8 +29,7 @@ import { useTheme } from './themeUtils/useTheme'
 
 const Container = styled.div`
   width: 100%;
-  display:flex;
-  
+  display:flex; 
 `
 const ContainerPage = styled.div`
   position:relative;
@@ -59,6 +59,7 @@ const App = () => {
   const [showDialog, setShowDialog] = useState(false);
   const [newTheme, setNewTheme] = useState();
   const [showModal, setShowModal] = useState(false);
+  const [themeUser, setThemeUser] = useState([]);
 
   useEffect(() => {
     WebFont.load({
@@ -67,6 +68,18 @@ const App = () => {
       }
     });
   });
+  useEffect(() => {
+    async function fetchData(){
+          const request = await axios.get('http://localhost/serveur_landing_page_generator/front/user/2');   
+          setThemeUser(Object.values(request.data))
+          return request;
+   }
+   fetchData();
+  }, []);
+ console.log(themeUser)
+  // useEffect(() => {
+  //   axios.get('http://localhost/serveur_landing_page_generator/front/users').then(resp => {console.log(resp.data)})
+  //  }, []);
 
   useEffect(() => {
     setSelectedTheme(theme);
